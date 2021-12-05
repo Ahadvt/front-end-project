@@ -1,0 +1,1514 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:992px) {
+    header{
+        .icons{
+            display: none !important;
+        }
+        height: 3rem;
+        nav{
+            height: 3rem;
+            .head{
+                height: 3rem;
+
+                .icon-menu{
+
+                    display: block !important;
+
+                }
+                .menu{
+                    .mainmenu{
+                        display: none !important;
+                    }
+                    display: none ;
+                }
+               .menuresponsive{
+                   display: flex;
+               }
+               .logo{
+                   position: absolute;
+                   left: 150px;
+               }
+
+
+            }
+        }
+    }
+}
+
+header {
+    #secondheader{
+        background-color: white;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: 2;
+        height: 6.5rem;
+        display: none;
+
+        .menu {
+            display: block;
+
+            .menu-list {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin: 0px;
+                list-style: none;
+
+
+
+
+                a:after {
+                    display: block;
+                    content: '';
+                    border-bottom: solid 2px black;
+                    transform: scaleX(0);
+                    transition: transform 250ms ease-in-out;
+                }
+
+                a:hover:after {
+                    transform: scaleX(1)
+                }
+                a:after{
+                    transform-origin: 100% 50%;
+                }
+                a:after{
+                    transform-origin: 0% 50%;
+                }
+
+
+                li
+                {
+
+
+                    &:hover {
+
+                        .inhome,
+                        .pages {
+
+                            visibility: visible;
+                            height: 300%;
+
+
+                        }
+
+                        .pages {
+                            visibility: visible;
+                            height: 120%;
+                        }
+
+                        .shopInli {
+                            visibility: visible;
+                            height:   800%;
+
+                        }
+
+                        .portfolio {
+                            visibility: visible;
+                            height: 200%;
+                        }
+
+                        .blog {
+                            visibility: visible;
+                            height: 150%;
+                        }
+                        .elementInli{
+                            visibility: visible;
+                            height: 150%;
+                        }
+
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        font-size: 13px;
+                        letter-spacing: 2px;
+                    }
+
+                    .inhome {
+                        list-style: none;
+                        position: absolute;
+                        top: 65%;
+                        left: 40%;
+                        width: 16%;
+                        background-color: white !important;
+                        transition: 0.2s;
+                        z-index: 5000 !important;
+
+                        li {
+                            padding: 0.313rem;
+                            line-height:1.188rem;
+                            margin:  0.313rem;
+
+                            a {
+                                color: #737373;
+                                letter-spacing: 0.063rem;
+                            }
+                        }
+                    }
+
+                    .pages {
+                        list-style: none;
+                        position: absolute;
+                        top: 75%;
+                        left: 50%;
+                        width: 16%;
+                        background-color: white !important;
+                        transition: 0.2s;
+                        
+
+                        li {
+                            padding: 0.313rem;
+                            line-height:1.188rem;
+                            margin:  0.313rem;
+
+                            a {
+                                color: #737373;
+                                letter-spacing: 0.063rem;
+                            }
+                        }
+                    }
+
+                    .shopInli {
+                        display: flex;
+                        position: absolute;
+                        top: 65%;
+                        left: 7%;
+                        background-color: white !important;
+                        width: 87%;
+                        height: 79vh;
+                        justify-content: space-around;
+                        transition: 0.2s;
+                        height: 0;
+                        visibility: hidden;
+                        z-index: 3;
+
+                        ul {
+                            list-style: none;
+
+                            margin: 1.875rem;
+
+                            li {
+                                padding: 0.313rem;
+                            line-height:1.188rem;
+                            margin:  0.313rem;
+
+                                a {
+                                    color: #737373;
+                                    letter-spacing: 0.063rem;
+                                    line-height: 1.25rem;
+
+                                }
+                            }
+                        }
+                    }
+
+                    .portfolio {
+                        list-style: none;
+                        position: absolute;
+                        top: 65%;
+                        left: 65%;
+                        width: 16%;
+                        background-color: white !important;
+                        transition: 0.2s;
+                        height: 0;
+                        visibility: hidden;
+
+                        li {
+                            padding: 0.313rem;
+                            line-height:1.188rem;
+                            margin:  0.313rem;
+
+                            &:hover {
+
+                                .Layouts,
+                                .Single {
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
+                            }
+
+                            a {
+                                color: #737373;
+                                letter-spacing: 0.063rem;
+                            }
+
+                            .Layouts {
+                                list-style-type: none;
+                                background-color: white;
+                                position: absolute;
+                                left: 100%;
+                                width: 210px;
+                                top: 60%;
+                                transition: 0.4s;
+                                opacity: 0;
+                            }
+
+                            .Single {
+                                list-style-type: none;
+                                background-color: white;
+                                position: absolute;
+                                left: 100%;
+                                width: 210px;
+                                top: 65%;
+                                transition: 0.4s;
+                                opacity: 0;
+                            }
+
+                        }
+                    }
+
+                    .blog {
+                        list-style: none;
+                        position: absolute;
+                        top: 65%;
+                        left: 75%;
+                        width: 16%;
+                        background-color: white !important;
+
+                        transition: 0.2s;
+                        height: 0;
+                        visibility: hidden;
+
+                        .Post {
+                            &:hover {
+                                .post-types {
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+
+                        li {
+                            padding: 0.313rem;
+                            line-height:1.188rem;
+                            margin:  0.313rem;
+
+                            a {
+                                color: #737373;
+                                letter-spacing: 0.063rem;
+                            }
+
+                            .post-types {
+                                list-style-type: none;
+                                background-color: white;
+                                position: absolute;
+                                left: 100%;
+                                width: 80%;
+                                top: 40%;
+                                transition: 0.4s;
+                                opacity: 0;
+                            }
+                        }
+                    }
+
+
+                    .elementInli {
+                        list-style-type: none;
+                        background-color: white !important;
+                        position: absolute;
+                        left: 77%;
+                        width: 18%;
+                        top: 65%;
+                        transition: 0.2s;
+                        visibility: hidden;
+                        height: 0px;
+                        li{
+                            padding: 0.313rem;
+                            line-height:1.188rem;
+                            margin:  0.313rem;
+                            display: flex;
+                            justify-content: end;
+
+                            a{
+                                color: #737373;
+                            }
+                        }
+                        .clasic{
+                            &:hover{
+                                .inclassic{
+                                    opacity: 1;
+                            visibility: visible;
+
+
+                                }
+                            }
+                        }
+
+                        .Graphic{
+                            &:hover{
+                                .InGraphic{
+                                    opacity: 1;
+                                    visibility: visible;
+
+                                }
+                            }
+                        }
+                        .Interactive{
+                            &:hover{
+                                .inInteractive{
+                                    opacity: 1;
+                                    visibility: visible;
+
+                                }
+                            }
+                        }
+
+                        .Tyography{
+                            &:hover{
+                                .inTyography{
+                                    opacity: 1;
+                                    visibility: visible;
+
+                                }
+                            }
+                        }
+
+
+                        .inclassic{
+                            list-style-type: none;
+                            background-color: white;
+                            position: absolute;
+                            right:  100%;
+                            width: 80%;
+                            top: 0px;
+                            transition: 0.4s;
+                            opacity: 0;
+                            visibility: hidden;
+
+                        }
+
+                        .InGraphic{
+                            list-style-type: none;
+                            background-color: white;
+                            position: absolute;
+                            right:  100%;
+                            width: 80%;
+                            top: 15%;
+                            transition: 0.4s;
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+
+                        .inInteractive{
+                            list-style-type: none;
+                            background-color: white;
+                            position: absolute;
+                            right:  100%;
+                            width: 80%;
+                            top: 40%;
+                            transition: 0.4s;
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+
+                        .inTyography{
+                            list-style-type: none;
+                            background-color: white;
+                            position: absolute;
+                            right:  100%;
+                            width: 80%;
+                            top: 60%;
+                            transition: 0.4s;
+                            opacity: 0;
+                            visibility: hidden;
+
+                                box-shadow: 0 5px 5px 0 rgba(0,0,0,.03);
+
+                        }
+
+
+                    }
+
+
+                }
+            }
+        }
+       
+       
+      
+    }
+   
+    height: 6.5rem;
+    background-color: white;
+    
+
+    nav {
+      
+       
+        .head {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0px 3.25rem;
+            height: 6.5rem;
+            align-items: center;
+            padding: 0.625rem;
+            overflow: hidden;
+            
+
+
+            .logo {
+
+                img {
+                    width: 13.313rem;
+                }
+            }
+
+            .menu {
+                display: block;
+
+                .menu-list {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin: 0px;
+                    list-style: none;
+
+
+
+
+                    a:after {
+                        display: block;
+                        content: '';
+                        border-bottom: solid 2px black;
+                        transform: scaleX(0);
+                        transition: transform 250ms ease-in-out;
+                    }
+
+                    a:hover:after {
+                        transform: scaleX(1)
+                    }
+                    a:after{
+                        transform-origin: 100% 50%;
+                    }
+                    a:after{
+                        transform-origin: 0% 50%;
+                    }
+
+
+
+
+
+
+
+                    li
+                    {
+
+
+                        &:hover {
+
+                            .inhome,
+                            .pages {
+
+                                visibility: visible;
+                                height: 45%;
+
+
+                            }
+
+                            .pages {
+                                visibility: visible;
+                                height: 23%;
+                            }
+
+                            .shopInli {
+                                visibility: visible;
+                                height: 79%;
+
+                            }
+
+                            .portfolio {
+                                visibility: visible;
+                                height: 34%;
+                            }
+
+                            .blog {
+                                visibility: visible;
+                                height: 23%;
+                            }
+                            .elementInli{
+                                visibility: visible;
+                                height: 23%;
+                            }
+
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: black;
+                            font-size: 13px;
+                            letter-spacing: 2px;
+                        }
+
+                        .inhome {
+                            list-style: none;
+                            position: absolute;
+                            top: 17%;
+                            left: 30%;
+                            width: 16%;
+                            background-color: white;
+                            transition: 0.2s;
+                            height: 0;
+                            visibility: hidden;
+                            z-index: 1;
+
+                            li {
+                                padding: 0.313rem;
+                                line-height:1.188rem;
+                                margin:  0.313rem;
+
+                                a {
+                                    color: #737373;
+                                    letter-spacing: 0.063rem;
+                                }
+                            }
+                        }
+
+                        .pages {
+                            list-style: none;
+                            position: absolute;
+                            top: 17%;
+                            left: 37%;
+                            width: 16%;
+                            background-color: white;
+                            transition: 0.2s;
+                            height: 0;
+                            visibility: hidden;
+
+                            li {
+                                padding: 0.313rem;
+                                line-height:1.188rem;
+                                margin:  0.313rem;
+
+                                a {
+                                    color: #737373;
+                                    letter-spacing: 0.063rem;
+                                }
+                            }
+                        }
+
+                        .shopInli {
+                            display: flex;
+                            position: absolute;
+                            top: 17%;
+                            left: 7%;
+                            background-color: white;
+                            width: 87%;
+                            height: 79vh;
+                            justify-content: space-around;
+                            transition: 0.2s;
+                            height: 0;
+                            visibility: hidden;
+                            z-index: 3;
+
+                            ul {
+                                list-style: none;
+
+                                margin: 1.875rem;
+
+                                li {
+                                    padding: 0.313rem;
+                                line-height:1.188rem;
+                                margin:  0.313rem;
+
+                                    a {
+                                        color: #737373;
+                                        letter-spacing: 0.063rem;
+                                        line-height: 1.25rem;
+
+                                    }
+                                }
+                            }
+                        }
+
+                        .portfolio {
+                            list-style: none;
+                            position: absolute;
+                            top: 17%;
+                            left: 52%;
+                            width: 16%;
+                            background-color: white;
+                            transition: 0.2s;
+                            height: 0;
+                            visibility: hidden;
+
+                            li {
+                                padding: 0.313rem;
+                                line-height:1.188rem;
+                                margin:  0.313rem;
+
+                                &:hover {
+
+                                    .Layouts,
+                                    .Single {
+                                        visibility: visible;
+                                        opacity: 1;
+                                    }
+                                }
+
+                                a {
+                                    color: #737373;
+                                    letter-spacing: 0.063rem;
+                                }
+
+                                .Layouts {
+                                    list-style-type: none;
+                                    background-color: white;
+                                    position: absolute;
+                                    left: 100%;
+                                    width: 210px;
+                                    top: 60%;
+                                    transition: 0.4s;
+                                    opacity: 0;
+                                }
+
+                                .Single {
+                                    list-style-type: none;
+                                    background-color: white;
+                                    position: absolute;
+                                    left: 100%;
+                                    width: 210px;
+                                    top: 65%;
+                                    transition: 0.4s;
+                                    opacity: 0;
+                                }
+
+                            }
+                        }
+
+                        .blog {
+                            list-style: none;
+                            position: absolute;
+                            top: 17%;
+                            left: 63%;
+                            width: 16%;
+                            background-color: white;
+
+                            transition: 0.2s;
+                            height: 0;
+                            visibility: hidden;
+
+                            .Post {
+                                &:hover {
+                                    .post-types {
+                                        visibility: visible;
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+
+                            li {
+                                padding: 0.313rem;
+                                line-height:1.188rem;
+                                margin:  0.313rem;
+
+                                a {
+                                    color: #737373;
+                                    letter-spacing: 0.063rem;
+                                }
+
+                                .post-types {
+                                    list-style-type: none;
+                                    background-color: white;
+                                    position: absolute;
+                                    left: 100%;
+                                    width: 80%;
+                                    top: 40%;
+                                    transition: 0.4s;
+                                    opacity: 0;
+                                }
+                            }
+                        }
+
+
+                        .elementInli {
+                            list-style-type: none;
+                            background-color: white;
+                            position: absolute;
+                            left: 67%;
+                            width: 18%;
+                            top: 17%;
+                            transition: 0.2s;
+                            visibility: hidden;
+                            height: 0px;
+                            li{
+                                padding: 0.313rem;
+                                line-height:1.188rem;
+                                margin:  0.313rem;
+                                display: flex;
+                                justify-content: end;
+
+                                a{
+                                    color: #737373;
+                                }
+                            }
+                            .clasic{
+                                &:hover{
+                                    .inclassic{
+                                        opacity: 1;
+                                visibility: visible;
+
+
+                                    }
+                                }
+                            }
+
+                            .Graphic{
+                                &:hover{
+                                    .InGraphic{
+                                        opacity: 1;
+                                        visibility: visible;
+
+                                    }
+                                }
+                            }
+                            .Interactive{
+                                &:hover{
+                                    .inInteractive{
+                                        opacity: 1;
+                                        visibility: visible;
+
+                                    }
+                                }
+                            }
+
+                            .Tyography{
+                                &:hover{
+                                    .inTyography{
+                                        opacity: 1;
+                                        visibility: visible;
+
+                                    }
+                                }
+                            }
+
+
+                            .inclassic{
+                                list-style-type: none;
+                                background-color: white;
+                                position: absolute;
+                                right:  100%;
+                                width: 80%;
+                                top: 0px;
+                                transition: 0.4s;
+                                opacity: 0;
+                                visibility: hidden;
+
+                            }
+
+                            .InGraphic{
+                                list-style-type: none;
+                                background-color: white;
+                                position: absolute;
+                                right:  100%;
+                                width: 80%;
+                                top: 15%;
+                                transition: 0.4s;
+                                opacity: 0;
+                                visibility: hidden;
+                            }
+
+                            .inInteractive{
+                                list-style-type: none;
+                                background-color: white;
+                                position: absolute;
+                                right:  100%;
+                                width: 80%;
+                                top: 40%;
+                                transition: 0.4s;
+                                opacity: 0;
+                                visibility: hidden;
+                            }
+
+                            .inTyography{
+                                list-style-type: none;
+                                background-color: white;
+                                position: absolute;
+                                right:  100%;
+                                width: 80%;
+                                top: 60%;
+                                transition: 0.4s;
+                                opacity: 0;
+                                visibility: hidden;
+
+                                    box-shadow: 0 5px 5px 0 rgba(0,0,0,.03);
+
+                            }
+
+
+                        }
+
+
+                    }
+                }
+            }
+            .icon-menu{
+                position: absolute;
+                right: 10rem;
+                display: none;
+            }
+              .menuresponsive{
+                  overflow: hidden;
+                display: none;
+                background-color: white;
+                width: 50%;
+                position: absolute;
+                right:   0px;
+
+
+                .icon-close{
+                    position: absolute;
+                    right: 1rem;
+                    top: 1rem;
+                    color: orange;
+                }
+
+                ul{
+                    list-style-type: none;
+                    li {
+                        padding: 0.313rem;
+                        line-height:1.188rem;
+                        margin:  0.313rem;
+                        ul{
+                            display: none;
+                        }
+
+
+                        a {
+                            color: #737373;
+                            letter-spacing: 0.063rem;
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+            }
+
+            .icons {
+                display: flex;
+
+                justify-content: space-evenly;
+
+                .basket-icon {
+                    i {
+                        color: rgba(0, 0, 0, 0.671);
+                        font-size: 1.063rem;
+                    }
+
+                    span {
+                        margin-left:0.313rem;
+                        font-size: 0.813;
+                    }
+                }
+                .search-icon{
+                    cursor: pointer;
+                    &:hover{
+                        color: orange;
+                        transition: .3s;
+                    }
+
+                }
+
+                .searchinput{
+                    position: absolute;
+                    top: 16.5%;
+                    right: 19%;
+                    width: 270px;
+                    background-color: white;
+                    display: none;
+                    justify-content: center;
+
+                    input{
+                        height: 40px;
+                        width: 250px;
+                        background-color: transparent;
+                        border: 0px solid;
+                        padding: 10px;
+
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+main{
+   
+    @media screen and (max-width:800px) {
+        #filterresponsive{
+            display: block !important;
+        }
+        #category{
+            
+            display: none !important;
+           
+
+        }
+    }
+    @media screen and (max-width:1000px) {
+        #slideText{
+            width: 100%;
+            overflow: hidden;
+            
+        }
+        #videoinfo{
+          display: block !important;
+          
+        }
+       
+    }
+
+    @media screen and (max-width:540px) {
+        #slideText{
+            
+            .text-center{
+                display: none;
+            }
+        }
+        
+    }
+    #img-animation{
+        .img-text{
+            background-image: url("../img/2.jpg");
+            background-repeat: no-repeat;
+            background-size: 1300px;
+           height: 26.563rem;
+         background-position: right;
+         display: flex;
+         align-items: center;
+
+        animation: animate 10s ease-in-out infinite ;
+
+
+         .text{
+             width: 29%;
+             position: relative;
+             left: 9.375rem;
+             text-align:inherit;
+             font-weight: 400;
+             font-size: 1rem;
+
+
+             .text-center{
+                color: #737373;
+                text-align-last: left;
+
+
+             }
+         }
+        }
+        @keyframes animate {
+            0%{
+                background-image: url("../img/1.jpg");
+
+
+                z-index: 1;
+            }
+            50%{
+                background-image: url("../img/2.jpg");
+                z-index: 2;
+
+
+            }
+            100%{
+                background-image: url("../img/3.jpg");
+                z-index: 3;
+
+
+            }
+
+        }
+    }
+
+    #cards{
+        margin-top: 3.125rem;
+        margin-left: 1.563rem;
+        margin-right: 1.563rem;
+        .card-filter{
+
+            .filter-list{
+                #filterresponsive{
+                    display: none ;
+                    #categoryresp{
+                        display: none;
+                        list-style: none;
+                        margin-left: -2rem;
+
+                        li{
+                            color: black;
+                            padding: 0px;
+                            a{
+                                color: black;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+             display: flex;
+             justify-content: space-between;
+
+             .filters{
+                 width: 45%;
+                 ul{
+                     list-style-type: none;
+                     display: flex;
+                     justify-content: space-between;
+                     li{
+                         a{
+                             text-decoration: none;
+                             color: #737373;
+                             font-size: 0.813rem;
+                             &:hover{
+                                 color: orange;
+                             }
+                         }
+                     }
+
+                    }
+
+             }
+
+          .filter{
+              margin-right: 1.438rem;
+
+              .text-filter{
+                  text-align: right;
+
+
+
+
+              }
+              .Filters{
+                  display: none;
+                  justify-content: flex-end;
+                  background-color: white;
+                  position: absolute;
+                  right: 2rem;
+                  .info-price{
+                      display: flex;
+                    ul{
+
+                        list-style-type: none;
+                    }
+                  }
+              }
+
+
+
+
+
+
+          }
+
+
+            }
+            .cards{
+                .mycard{
+                    margin-bottom: 3rem;
+
+                    text-align: center;
+                    .img{
+                        overflow: hidden;
+                        transition: .4s;
+                        img{
+                            transition: .4s;
+                            height: auto;
+
+
+                            &:hover{
+                                transform: scale(1.05);
+                            }
+                        }
+                    }
+                    .name{
+                        margin-top: 1rem;
+                        a{
+                            text-decoration: none;
+                            color: #757575;
+                        }
+                    }
+
+                    .price{
+                        display: flex;
+                        position: relative;
+                       
+                        overflow: hidden;
+                        color: #757575;
+
+                        .cost{
+                        // position: absolute;
+                        transition: .6s;
+                        margin-left: 7rem;
+
+                        }
+
+                      .product{
+                       position: absolute;
+                       transform: translateX(-2000px);
+                       transition: -6s;
+                       margin-left: 6rem;
+                      }
+
+                    }
+
+
+
+                        &:hover{
+                            .cost{
+                                opacity: 0;
+                            }
+                            .product{
+                                transform: translateX(0);
+
+                            }
+                        }
+
+                }
+
+            }
+        }
+    }
+    #video{
+        margin-bottom: 5rem;
+        position: relative;
+        top: 5rem;
+        background-color: #F7F7F7;
+        height: 30rem;
+        .video-about{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 30rem;
+            .video{
+                width: 50%;
+                overflow: hidden;
+                position: relative;
+                img{
+                    transition: 1s;
+                    &:hover{
+                         transform: scale(1.06);
+                    }
+                    width: 105%;
+
+                }
+                .icon{
+                    height: 5rem;
+                    width: 5rem;
+                    position: absolute;
+                    top: 40%;
+                    left: 40%;
+                    i{
+                        font-size: 5rem;
+                        color: white;
+                        background-color: red;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .about{
+                width: 45%;
+                ul{
+                    list-style: none;
+                    img{
+                        display: inline-block;
+                    }
+                    p{
+                        display: inline-block;
+                    }
+
+                }
+            }
+        }
+    }
+
+    #flower{
+
+        .text{
+            margin-top: 10rem;
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        .imgs{
+          .img-text{
+              .img{
+                  text-align: center;
+
+                  img{
+                      width: 70%;
+                  }
+              }
+              .text{
+                  margin-top: 0.500rem;
+                  p{
+                      font-size: 0.800rem;
+                  }
+              }
+          }
+        }
+    }
+    #mypar{
+        position: relative;
+        .parallax-window {
+            min-height: 400px;
+            background: transparent;
+        }
+        .text-input{
+
+            position: absolute;
+            left: 33%;
+            top: 30%;
+            text-align: center;
+            .text{
+                color: white;
+                margin-bottom: 2rem;
+            }
+            .myinput-btn{
+                display: flex;
+                input{
+                    width: 18rem;
+                    padding: 0.300rem;
+                }
+                .mybtn{
+
+                    button{
+                        background-color: red;
+                        color: white;
+                        width: 8rem;
+                    height: 3rem;
+                    border: none;
+                    opacity: 0.8;
+                    transition: .3s;
+                    &:hover{
+                        opacity: 1;
+                    }
+                    }
+                }
+            }
+
+        }
+    }
+
+    #blog{
+        background-color: #F8F8F8;
+        text-align: center;
+        .texts{
+            padding: 4rem 0rem;
+        }
+        .cards{
+            .mycard{
+                .img{
+                    overflow: hidden;
+                    img{
+                        transition: 0.4s;
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+                .text{
+                    margin-top: 1.5rem;
+                    .desc{
+                        color: #757575;
+                    }
+                }
+            }
+        }
+    }
+    #slidebar{
+        .slide{
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+           
+            .slide-bar{
+                width: 60%;
+                margin: 5rem;
+                
+                .img{
+                    transform: translateX(20rem);
+                    img{
+                        width: 10%;
+                    }
+                }
+                .info-name{
+                    .info{
+                        font-style: italic;
+                        font-size: 2rem;
+                        color: #757575;
+                    }
+                    .name{
+                        
+                            span{
+                                color: #757575;
+                            }
+                        
+                    }
+                }
+            }
+        }
+    }
+    #Productlist{
+        background-color: #FAFAF9;
+        .text{
+           padding: 3rem 0rem;
+           .text-top{
+            font-family: "Playfair Display",serif;
+            font-weight: 400;
+            font-size: 3.125rem;
+             line-height: 1.32em
+           }
+           .text-bottom{
+            font-family: Lora,serif;
+            font-size: 1.063rem;
+            font-style: italic;
+            text-transform: none;
+            letter-spacing: 0;
+            color: #6d6a6a;
+           }
+        }
+    }
+
+    #adcart{
+        
+        .imgs{
+            display: flex;
+           
+         .small-imgs{
+           .img{
+            margin-bottom: 1rem;
+           }
+      
+         }
+
+         .largimage{
+            transform: translate(-6.5rem);
+            img{
+                width: 130%;
+
+            }
+                
+            }
+        }
+       .sale{
+           
+.text-input{
+    .text{
+        .name{
+            h2{
+             font-size: 2.375rem;
+              line-height: 1.447em;
+              color: #2b2b2b;
+              font-family: "Playfair Display",serif;
+              font-weight: 400;
+              margin-bottom: 0px;
+              
+            }
+         
+        }
+        .cost{
+            p{
+                color: #757575;
+                font-size: 0.900rem;
+                margin-top: 0px;
+                
+            }
+        }
+        .info{
+            font-size: 1rem;
+           color:  #757575;;
+        }
+
+        .input{
+            margin-top: 2rem;
+            display: flex;
+            width: 100%;
+            input{
+               width: 17rem;
+            }
+            .butn{
+                button{
+                    background-color: black;
+                    color: white;
+                    height: 3rem;
+                    width: 10rem;
+                    margin-left: 0rem;
+                    
+                    padding: 0.600rem;
+                }
+            }
+        }
+
+        .product-info{
+            margin-top: 1.5rem;
+            ul{
+                padding-left: 0px;
+                list-style: none;
+                li{
+                    padding-left: 0px;
+                    a{
+                        text-decoration: none;
+                        color: #737373;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+       }
+    }
+}
+
+footer{
+    background-color: #FEFAF3;
+    .topFooter{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid gray;
+        
+        
+        h6{
+            font-size: 0.900rem;
+            font-weight: 400;
+            margin-top: 3rem;
+        }
+                ul{
+                    margin-top: 1rem;
+                    list-style: none;
+                    padding: 0px;
+                    li{
+                        a{
+                            text-decoration: none;
+                            color: #757575;
+                            font-size: 0.800rem;
+                        }
+                    }
+                }
+                
+            
+        
+    }
+ .bottomFooter{
+     display: flex;
+     justify-content: space-between;
+     .text{
+         display: flex;
+         justify-content: space-evenly;
+     }
+     p{
+         font-size: 0.813rem;
+         color: #757575;
+     }
+ }
+}
