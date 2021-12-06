@@ -1,6 +1,21 @@
 $(document).ready(function(){
 
-  
+let btns=document.querySelectorAll(".butns .butn")
+btns.forEach(btn=>{
+    let id= $(btn).attr("data-id")
+         let card=document.getElementById(id)
+         let cards=$(card).parent()
+         cards.children().hide()
+         $(card).show()
+    $(btn).click(function(){
+        cards.children().hide()
+         $(card).show()
+         
+     })
+})
+
+
+
     $(document).scroll(function(){
         $("#secondheader").hide()
         
@@ -44,45 +59,9 @@ $(document).ready(function(){
         u.slideToggle()
         
     })
-    
-    let filterresponsive=document.querySelector("#filterresponsive")
-    let ulresp=document.querySelector("#category")
-    
-    $("#filterresponsive").click(function(){
-    
-        $("#categoryresp").slideToggle()
-    })
-    
-    
-    
-    $(".text-filter p").hover(function(){
-        $(".Filters").slideToggle()
         
     })
-     
     
-        
-    $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:true,
-        dots:false,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:1
-            },
-            1000:{
-                items:1
-            }
-        }
-    })
-    
-    
-    $('.parallax-window').parallax({imageSrc: './assets/img/h3-background-img.jpg'});
-    })
     
     
     

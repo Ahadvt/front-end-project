@@ -1379,7 +1379,7 @@ main{
     }
 
     #adcart{
-        
+        // overflow: hidden;
         .imgs{
             display: flex;
            
@@ -1467,6 +1467,135 @@ main{
 }
 
        }
+    }
+    #info-flower{
+        
+        
+        .butns-cards{
+            .butns{
+                margin-left: 3rem;
+                .butn{
+                    width: auto;
+                    padding: 0.55rem 1rem;
+                    background-color: #F34F3F;
+                    border: 1px solid rgb(44, 43, 43);
+                    color: #1b1b1b;
+                    font-family: Montserrat;
+                    font-size: 12px;
+                    line-height: 2em;
+                    font-weight: 500;
+                    letter-spacing: 0.1em;
+                    cursor: pointer;
+                }
+            }
+        }
+        .cards{
+            .card{
+                
+                overflow: hidden;
+                height: auto;
+                padding: 4rem;
+                .text-top{
+                    h3{
+                        color: #2b2b2b;
+                        font-family: "Playfair Display",serif;
+                        font-weight: 400;
+                        font-size: 1.438rem;
+                    }
+                    p{
+                        font-weight: bold;
+                        span{
+                        font-weight: 300;
+                        }
+                    }
+                }
+                .text-bottom{
+                    p{
+                        font-weight: bold;
+                        span{
+                        font-weight: 300;
+                        }
+                    }
+                }
+                .head{
+                    h3{
+                        color: #2b2b2b;
+                        font-family: "Playfair Display",serif;
+                        font-weight: 400;
+                        margin-bottom: 2rem;
+                    }
+                }
+                .user{
+                  
+                    .user-img{
+                        display: inline-block;
+                        img{
+                            width: 60%;
+
+                        }
+                    }
+                    .user-name{
+                        display: inline-block;
+                        font-family: Montserrat,sans-serif;
+                        letter-spacing: .1em;
+                        line-height: 1rem;
+                        position: relative;
+                        right: 1rem;
+                        bottom: 1rem;
+                        font-size: 12px;;
+                        
+
+                    }
+                    .user-descript{
+                        display: inline-block;
+                        position: relative;
+                        bottom: 2rem;
+                        left: 5rem;
+                        font-family: Lora,serif;
+                        font-size: 1rem;
+                        color: #737373;
+
+                        
+                    }
+
+                }
+                .form{
+                    h2{
+                        font-family: "Playfair Display",serif;
+                        font-size: 30px;
+                        line-height: 1.4em;
+                        margin: 0 0 12px;
+                        font-weight: 400;
+                        color: #2b2b2b;
+                    }
+                    input{
+                        display: block;
+                        width: 100%;
+                    }
+                    font-weight: 400;
+                    color: #757575;
+                    font-size: 13px;
+                    .mybtn{
+                        button{
+                            width: auto;
+                            background-color: #F34F3F;
+                            color: white;
+                            border: none;
+                            padding: .5rem;
+                            width: 8rem;
+                            height: 3rem;
+
+                        }
+                    }
+
+                }
+                
+              width: 100%;
+                
+            }
+            
+        }
+        
     }
 }
 
