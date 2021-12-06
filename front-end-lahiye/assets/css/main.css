@@ -34,7 +34,7 @@
   }
   header nav .head .logo {
     position: absolute;
-    left: 150px;
+    left: 9.375rem;
   }
 }
 
@@ -1441,7 +1441,6 @@ main #info-flower .butns-cards .butns {
 main #info-flower .butns-cards .butns .butn {
   width: auto;
   padding: 0.55rem 1rem;
-  background-color: #F34F3F;
   border: 1px solid #2c2b2b;
   color: #1b1b1b;
   font-family: Montserrat;
@@ -1546,6 +1545,366 @@ main #info-flower .cards .card .form .mybtn button {
   padding: .5rem;
   width: 8rem;
   height: 3rem;
+}
+
+main #acordion {
+  margin-top: 4rem;
+}
+
+main #acordion .accordian {
+  margin-bottom: 5rem;
+}
+
+main #acordion .accordian .card {
+  background-color: white;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+main #acordion .accordian .card .card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  -webkit-transition: .1s;
+  transition: .1s;
+  border: none;
+}
+
+main #acordion .accordian .card .card-header:hover {
+  background-color: #F34F3F;
+}
+
+main #acordion .accordian .card .card-header:hover h3 {
+  color: white;
+  margin-left: 1rem;
+}
+
+main #acordion .accordian .card .card-header:hover span {
+  color: white;
+}
+
+main #acordion .accordian .card .card-header h3 {
+  cursor: pointer;
+  color: #757575;
+  position: relative;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 0px;
+  height: 100%;
+}
+
+main #acordion .accordian .card .card-header span {
+  height: 25px;
+  width: 25px;
+  color: #757575;
+  background-color: transparent;
+  text-align: center;
+  line-height: 25px;
+  font-size: 13px;
+}
+
+main #acordion .accordian .card .card-body {
+  padding: 20px;
+  display: none;
+  border: none;
+}
+
+main #acordion .accordian .card .card-body p {
+  font-size: 15px;
+  line-height: 24px;
+  color: #444444;
+  margin: 0px;
+  border: none;
+}
+
+main #acordion .accordian .card:nth-child(1) card-body {
+  display: block;
+}
+
+main #tab-top {
+  margin-top: 6rem;
+  overflow: hidden;
+}
+
+main #tab-top .butns-cards .butns {
+  margin-left: 0rem;
+}
+
+main #tab-top .butns-cards .butns .butn {
+  width: auto;
+  padding: 0.55rem 1rem;
+  color: #1b1b1b;
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 2em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+main #tab-top .cards .card {
+  overflow: hidden;
+  height: auto;
+  padding: 3rem 1rem 2rem 1rem;
+  margin-top: 0.100rem;
+  margin-bottom: 0px;
+  width: 100%;
+  border-top: none;
+}
+
+main #tab-top .cards .card .text {
+  padding: 0rem 2rem;
+  font-family: Lora,serif;
+}
+
+main #tab-top .cards .card .text p {
+  font-family: Lora,serif;
+  font-size: inherit;
+  color: #737373;
+}
+
+main #tab-center .butns {
+  margin-top: 12rem;
+  margin-left: -1.700rem;
+}
+
+main #tab-center .butns .butn {
+  width: auto;
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 2em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: white !important;
+  cursor: pointer;
+  padding: 1rem;
+  margin-left: 0.800rem;
+}
+
+main #tab-center .cards {
+  width: 100%;
+}
+
+main #tab-center .cards .card {
+  width: 200%;
+  border-left: none;
+  border-right: none;
+}
+
+main #tab-center .cards .card .text {
+  padding: 4rem 0rem;
+  font-family: Lora,serif;
+  color: #737373;
+}
+
+main #tab-end {
+  overflow: hidden;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+main #tab-end .butns-cards .butns {
+  width: 13%;
+  margin-right: 0px;
+  padding-right: 0px;
+}
+
+main #tab-end .butns-cards .butns .butn {
+  width: auto;
+  padding: 0.55rem 1rem;
+  color: #1b1b1b;
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 2em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #tab-end .cards {
+  width: 80%;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+main #tab-end .cards .card {
+  height: auto;
+}
+
+main #tab-end .cards .card .text {
+  padding: 1rem 2rem;
+  font-family: Lora,serif;
+  color: #737373;
+}
+
+main #ShopListCard {
+  overflow: hidden;
+}
+
+main #ShopListCard .cards .product {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main #ShopListCard .cards .product img {
+  width: 100%;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main #ShopListCard .cards .product:hover img {
+  opacity: 0.1;
+}
+
+main #ShopListCard .cards .product:hover .hoverProduct {
+  display: block;
+  opacity: 1;
+}
+
+main #ShopListCard .cards .product .hoverProduct {
+  text-align: center;
+  position: absolute;
+  top: 75%;
+  margin-left: 3.2rem;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main #ShopListCard .cards .product .hoverProduct .name h3 {
+  text-transform: uppercase;
+  font-family: Montserrat,sans-serif;
+  font-size: 1rem;
+}
+
+main #ShopListCard .cards .product .hoverProduct .price p {
+  color: #757575;
+}
+
+main #ShopListCard .cards .product .hoverProduct .butn button {
+  background-color: #F34F3F;
+  text-transform: uppercase;
+  font-family: Montserrat,sans-serif;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  padding: .5rem 1rem;
+}
+
+main #caruselproduct {
+  overflow: hidden;
+  margin-top: 15rem;
+}
+
+main #caruselproduct .item {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main #caruselproduct .item:hover .cost {
+  -webkit-transform: translateX(5rem);
+          transform: translateX(5rem);
+  opacity: 0;
+}
+
+main #caruselproduct .item:hover .add {
+  -webkit-transform: translateX(5rem);
+          transform: translateX(5rem);
+  opacity: 1;
+}
+
+main #caruselproduct .item:hover:hover img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+main #caruselproduct .item img {
+  overflow: hidden;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+main #caruselproduct .text h6 {
+  color: #1b1b1b;
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 2em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+main #caruselproduct .info {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
+}
+
+main #caruselproduct .info .cost {
+  font-size: .800rem;
+  color: #757575;
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin-left: 2rem;
+}
+
+main #caruselproduct .info .add {
+  font-family: Montserrat;
+  color: #757575;
+  font-size: 0.700rem;
+  text-transform: uppercase;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transform: translateX(-120px);
+          transform: translateX(-120px);
+  opacity: 0;
+}
+
+main #minicards {
+  overflow: hidden;
+  margin-top: 13rem;
+  margin-bottom: 2rem;
+}
+
+main #minicards .cards .cart .img img {
+  width: 100%;
+  -webkit-transition: .5s;
+  transition: .5s;
+  overflow: hidden;
+}
+
+main #minicards .cards .cart .img img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+main #minicards .cards .cart .text {
+  text-align: center;
+}
+
+main #minicards .cards .cart .text .price {
+  color: #757575;
+  margin-top: -1rem;
+  font-style: 13px;
 }
 
 footer {

@@ -24,14 +24,15 @@
                     .mainmenu{
                         display: none !important;
                     }
-                    display: none ;
+                    display: none;
+                    
                 }
                .menuresponsive{
                    display: flex;
                }
                .logo{
                    position: absolute;
-                   left: 150px;
+                   left: 9.375rem;
                }
 
 
@@ -1477,7 +1478,7 @@ main{
                 .butn{
                     width: auto;
                     padding: 0.55rem 1rem;
-                    background-color: #F34F3F;
+                    
                     border: 1px solid rgb(44, 43, 43);
                     color: #1b1b1b;
                     font-family: Montserrat;
@@ -1596,6 +1597,371 @@ main{
             
         }
         
+    }
+
+    #acordion{
+        margin-top: 4rem;
+        .accordian {
+            margin-bottom: 5rem;
+            .card{
+                background-color: white;
+                 margin-bottom: 1rem;
+                width: 100%;
+                .card-header {
+                    display: flex;
+                    // justify-content: space-between;
+                    align-items: center;
+                    padding: 0.5rem;
+                    transition: .1s;
+                    border: none;
+
+                    &:hover{
+                        background-color: #F34F3F;
+                        
+    
+                            h3{
+                                color: white;
+                                margin-left: 1rem;
+                            }
+                            span{
+                                
+                                color: white;
+        
+                            }
+                        
+                       
+                    }
+                   
+                    
+                    h3{
+
+                        cursor: pointer;
+                        color:#757575;
+                        position: relative;
+                        margin:0;
+                        font-size: 13px;
+                        line-height: 18px;
+                        padding: 0px;
+                        height: 100%;
+                        
+                       
+                    }
+
+                    span{
+                        height:25px;
+                        width:25px;
+                        color:#757575;
+                        background-color: transparent;
+                        text-align: center;
+                        line-height:25px;
+                        font-size:13px;
+                    }
+                    
+                   
+                
+                }
+
+                .card-body{
+                    padding:20px;
+                    display: none;
+                    border: none;
+
+                    p{
+                        font-size: 15px;
+                        line-height: 24px;
+                        color:#444444;
+                        margin:0px;
+                        border: none;
+                    }
+                }
+                &:nth-child(1){
+                    card-body{
+                        display: block;
+                       }
+                }
+            }
+            
+          
+        }
+    }
+    #tab-top{
+        margin-top: 6rem;
+        overflow: hidden;
+            .butns-cards{
+                .butns{
+                    margin-left: 0rem;
+                    .butn{
+                        width: auto;
+                        padding: 0.55rem 1rem;
+                        
+                        color: #1b1b1b;
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        line-height: 2em;
+                        font-weight: 500;
+                        letter-spacing: 0.1em;
+                        cursor: pointer;
+                        border: 1px solid rgba(0,0,0,.125);
+                        
+                    }
+                }
+            }
+            .cards{
+                .card{
+                    
+                    overflow: hidden;
+                    height: auto;
+                    padding: 3rem 1rem 2rem 1rem;
+                    margin-top: 0.100rem;
+                    margin-bottom: 0px;
+                     width: 100%;
+                    border-top: none;
+                  .text{
+                      padding: 0rem 2rem;
+                      font-family: Lora,serif;
+                      p{
+                        font-family: Lora,serif;
+                        font-size: inherit;
+                        color: #737373;
+                      }
+                  }
+                    
+                }
+                
+            }
+    }
+
+    #tab-center{
+        .butns{
+            margin-top: 12rem;
+            margin-left: -1.700rem;
+            .butn{
+          width: auto;
+          font-family: Montserrat;
+          font-size: 12px;
+          line-height: 2em;
+          font-weight: 500;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          background-color: white !important;
+          cursor: pointer;
+          padding: 1rem;
+          margin-left: 0.800rem;
+
+            }
+        }
+         .cards{
+             width: 100%;
+             .card{
+                 width: 200%;
+                 border-left: none;
+                     border-right: none;
+                 .text{
+                     padding: 4rem 0rem;
+                     font-family: Lora,serif;
+                     color: #737373;
+                     
+                 }
+             }
+         }
+    }
+    #tab-end{
+        overflow: hidden;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+
+
+        .butns-cards{
+            .butns{
+                width: 13%;
+                .butn{
+                    width: auto;
+                    padding: 0.55rem 1rem;
+                    
+                    color: #1b1b1b;
+                    font-family: Montserrat;
+                    font-size: 12px;
+                    line-height: 2em;
+                    font-weight: 500;
+                    letter-spacing: 0.1em;
+                    cursor: pointer;
+                    border: 1px solid rgba(0,0,0,.125);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                }
+                margin-right: 0px;
+                padding-right: 0px;
+            }
+        }
+        .cards{
+                        width: 80%;
+            .card{
+                
+               height: auto;
+                .text{
+                    padding: 1rem 2rem;
+                    font-family: Lora,serif;
+                    color: #737373;
+                    
+                }
+            }
+            margin-left: 0px;
+            padding-left: 0px;
+        }
+    }
+
+    #ShopListCard{
+        overflow: hidden;
+        .cards{
+            
+            .product{
+                transition: .3s;
+                img{
+                    width: 100%;
+                    transition: .3s;
+                }
+                &:hover{
+                    img{
+                        opacity: 0.1;
+                        
+                    }
+                    .hoverProduct{
+                        display: block;
+                        opacity: 1;
+                    }
+                }
+                .hoverProduct{
+                    text-align: center;
+                    position: absolute;
+                    top: 75%;
+                    margin-left: 3.2rem;
+                    opacity: 0;
+                    transition: .3s;
+                
+                    .name{
+                        h3{
+                            text-transform: uppercase;
+                            font-family: Montserrat,sans-serif;
+                             font-size: 1rem;
+                             
+                        }
+                    }
+                    .price{
+                        p{
+                            color: #757575;
+                        }
+                    }
+                    .butn{
+                           button{
+                               background-color: #F34F3F;
+                               text-transform: uppercase;
+                            font-family: Montserrat,sans-serif;
+                             font-size: 1rem;
+                             color: white;
+                             border: none;
+                             padding: .5rem 1rem;
+                           }
+                    }
+                }
+            }
+        }
+    }
+    #caruselproduct{
+    overflow: hidden;
+
+        margin-top: 15rem;
+
+        .item{
+            transition: .3s;
+            &:hover{
+                .cost{
+                    transform: translateX(5rem);
+                    opacity: 0;
+                    
+                }
+                .add{
+                    transform: translateX(5rem);
+                    opacity: 1;
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.05);
+                        
+                    }
+                }
+            }
+            img{
+                overflow: hidden;
+            transition: .5s
+            }
+        }
+        .text{
+            h6{
+                color: #1b1b1b;
+                font-family: Montserrat;
+                font-size: 12px;
+                line-height: 2em;
+                font-weight: 500;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                
+            }
+        }
+        .info{
+            text-align: center;
+            display: flex;
+            margin-top: 1rem;
+            .cost{
+                font-size: .800rem;
+                color: #757575;
+                transition: .3s;
+                margin-left: 2rem;
+
+                
+            
+            }
+            .add{
+                font-family: Montserrat;
+                color: #757575;
+                font-size: 0.700rem;
+                text-transform: uppercase;
+                transition: .3s;
+                
+                transform: translateX(-120px);
+                opacity: 0;
+
+            }
+        }
+    }
+    #minicards{
+        overflow: hidden;
+        margin-top: 13rem;
+        margin-bottom: 2rem;
+        .cards{
+            .cart{
+                .img{
+                    img{
+                        width: 100%;
+                        transition: .5s;
+                        overflow: hidden;
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+                .text{
+                    text-align: center;
+                    .price{
+                        color: #757575;
+                        margin-top: -1rem;
+                        font-style: 13px
+                        ;
+                    }
+                }
+            }
+        }
     }
 }
 

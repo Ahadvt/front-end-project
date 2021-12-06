@@ -1,36 +1,11 @@
 $(document).ready(function(){
 
-let btns=document.querySelectorAll(".butns .butn")
-btns.forEach(btn=>{
-    let id= $(btn).attr("data-id")
-         let card=document.getElementById(id)
-         let cards=$(card).parent()
-         cards.children().hide()
-         $(card).show()
-        
-
-    $(btn).click(function(){
-        $(this).parent().children().not(this).css("backgroundColor","white")
-        $(this).parent().children().not(this).css("color","black")
-        cards.children().hide()
-         $(card).show()
-         $(btn).css("backgroundColor", "#F34F3F")
-         $(btn).css("color", "white")
-         
-     })
-})
-
-
-
+  
     $(document).scroll(function(){
         $("#secondheader").hide()
-        
         let scrol=$(document).scrollTop()
         if (scrol>610) {
             $("#secondheader").show()
-            
-        }else{
-            $("#secondheader").hide()
         }
     })
     
@@ -65,9 +40,36 @@ btns.forEach(btn=>{
         u.slideToggle()
         
     })
+    
+    
+    
+    $(".text-filter p").hover(function(){
+        $(".Filters").slideToggle()
         
     })
+     
     
+        
+    
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:4
+            }
+        }
+    })
+    
+    
+    })
     
     
     
