@@ -1,6 +1,18 @@
 $(document).ready(function(){
 
     let btns=document.querySelectorAll(".butns .butn")
+    let btna=document.querySelector(".butns .butn")
+    let center=document.querySelector(".butns .center")
+    let right=document.querySelector(".butns .right")
+    let end=document.querySelector(".butns .end")
+    
+    $(center).css("color", "orange")
+    $(btna).css("backgroundColor", "#F34F3F")
+    $(right).css("backgroundColor", "#F34F3F")
+    $(right).css("color", "white")
+    $(btna).css("color", "white")
+    $(end).css("backgroundColor", "#F34F3F")
+    $(end).css("color", "white")
     btns.forEach(btn=>{
         let id= $(btn).attr("data-id")
              let card=document.getElementById(id)
@@ -8,9 +20,6 @@ $(document).ready(function(){
              cards.children().hide()
              $(card).show()
              
-        
-             
-    
         $(btn).click(function(){
             $(this).parent().children().not(this).css("backgroundColor","white")
             $(this).parent().children().not(this).css("color","black")
@@ -18,7 +27,6 @@ $(document).ready(function(){
              $(card).show()
              $(btn).css("backgroundColor", "#F34F3F")
              $(btn).css("color", "white")
-            
              
              let test=$(this).hasClass("center")
              

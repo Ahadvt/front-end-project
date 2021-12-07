@@ -934,9 +934,400 @@ header nav .head .icons .searchinput input {
   }
 }
 
+@media screen and (max-width: 992px) {
+  main #tab-top {
+    margin-top: 6rem;
+    overflow: hidden;
+    padding: 0px;
+  }
+  main #tab-top .butns-cards .butns {
+    margin: 0px;
+    display: block;
+  }
+  main #tab-top .butns-cards .butns .butn {
+    width: auto;
+    padding: 0.55rem 0rem;
+    color: #1b1b1b;
+    font-family: Montserrat;
+    font-size: 12px;
+    line-height: 2em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  main #tab-top .butns-cards .butns .active {
+    background-color: #F34F3F;
+    color: white;
+  }
+  main #tab-end {
+    overflow: hidden;
+    padding: 2rem;
+  }
+  main #tab-end .butns-cards .butns {
+    width: 100% !important;
+    margin-right: 0px;
+    padding-right: 0px;
+  }
+  main #tab-end .butns-cards .butns .butn {
+    width: auto;
+    padding: 0.55rem 1rem;
+    color: #1b1b1b;
+    font-family: Montserrat;
+    font-size: 12px;
+    line-height: 2em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #tab-end .cards {
+    width: 100% !important;
+    text-align: center;
+    margin-left: 13px !important;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+  main #tab-end .cards .card {
+    height: auto;
+  }
+  main #tab-end .cards .card .text {
+    font-family: Lora, serif;
+    color: #737373;
+  }
+  main #tab-center {
+    overflow: hidden;
+    padding: 1rem;
+  }
+  main #tab-center .butns {
+    margin-top: 12rem;
+    margin-left: -1.700rem;
+    display: block;
+  }
+  main #tab-center .butns .butn {
+    width: auto;
+    font-family: Montserrat;
+    font-size: 12px;
+    line-height: 2em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background-color: white !important;
+    cursor: pointer;
+    padding: 1rem;
+    margin-left: 0.800rem;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  main .video {
+    width: 100% !important;
+    overflow: hidden;
+  }
+  main .video img {
+    -webkit-transition: 1s;
+    transition: 1s;
+    width: 100%;
+  }
+  main .video img:hover {
+    -webkit-transform: scale(1.06);
+            transform: scale(1.06);
+  }
+  main .video .icon {
+    height: 5rem;
+    width: 5rem;
+    position: relative;
+    bottom: 40%;
+    left: 3% !important;
+  }
+  main .video .icon i {
+    font-size: 5rem;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  main #video {
+    margin-bottom: 5rem;
+    background-color: #F7F7F7;
+    height: auto;
+  }
+  main #video .video-about {
+    height: auto;
+    padding: 8rem 0rem;
+  }
+  main #video .video-about .video {
+    width: 100% !important;
+    overflow: hidden;
+  }
+  main #video .video-about .video img {
+    -webkit-transition: 1s;
+    transition: 1s;
+    width: 100%;
+  }
+  main #video .video-about .video img:hover {
+    -webkit-transform: scale(1.06);
+            transform: scale(1.06);
+  }
+  main #video .video-about .video .icon {
+    height: 5rem;
+    width: 5rem;
+    position: relative;
+    bottom: 40%;
+    left: 18%;
+  }
+  main #video .video-about .video .icon i {
+    font-size: 5rem;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+  }
+  main #video .video-about .about {
+    width: auto;
+    padding-left: 3rem;
+  }
+  main #video .video-about .about .text-top {
+    color: #2b2b2b;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+  }
+  main #video .video-about .about ul {
+    list-style: none;
+    padding: 0px;
+  }
+  main #video .video-about .about ul img {
+    display: inline-block;
+  }
+  main #video .video-about .about ul p {
+    display: inline-block;
+  }
+}
+
 @media screen and (max-width: 540px) {
   main #slideText .text-center {
     display: none;
+  }
+  main #tab-top {
+    margin-top: 6rem;
+    overflow: hidden;
+    padding: 0px;
+  }
+  main #tab-top .butns-cards .butns {
+    margin: 0px;
+    display: block;
+  }
+  main #tab-top .butns-cards .butns .butn {
+    width: auto;
+    padding: 0.55rem 0rem;
+    color: #1b1b1b;
+    font-family: Montserrat;
+    font-size: 12px;
+    line-height: 2em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  main #tab-top .butns-cards .butns .active {
+    background-color: #F34F3F;
+    color: white;
+  }
+  main #tab-end {
+    overflow: hidden;
+    padding: 2rem;
+  }
+  main #tab-end .butns-cards .butns {
+    width: 100% !important;
+    margin-right: 0px;
+    padding-right: 0px;
+  }
+  main #tab-end .butns-cards .butns .butn {
+    width: auto;
+    padding: 0.55rem 1rem;
+    color: #1b1b1b;
+    font-family: Montserrat;
+    font-size: 12px;
+    line-height: 2em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #tab-end .cards {
+    width: 100% !important;
+    text-align: center;
+    margin-left: 13px !important;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+  main #tab-end .cards .card {
+    height: auto;
+  }
+  main #tab-end .cards .card .text {
+    font-family: Lora, serif;
+    color: #737373;
+  }
+  main #tab-center {
+    overflow: hidden;
+    padding: 1rem;
+  }
+  main #tab-center .butns {
+    margin-top: 12rem;
+    margin-left: -1.700rem;
+    display: block;
+  }
+  main #tab-center .butns .butn {
+    width: auto;
+    font-family: Montserrat;
+    font-size: 12px;
+    line-height: 2em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background-color: white !important;
+    cursor: pointer;
+    padding: 1rem;
+    margin-left: 0.800rem;
+  }
+  main #video .video {
+    width: 100% !important;
+    overflow: hidden;
+  }
+  main #video .video img {
+    -webkit-transition: 1s;
+    transition: 1s;
+    width: 100%;
+  }
+  main #video .video img:hover {
+    -webkit-transform: scale(1.06);
+            transform: scale(1.06);
+  }
+  main #video .video .icon {
+    height: 5rem;
+    width: 5rem;
+    position: relative;
+    bottom: 40%;
+    left: -70px !important;
+  }
+  main #video .video .icon i {
+    font-size: 5rem;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+  }
+  main #info-flower .butns-cards .butns .butn {
+    width: 100% !important;
+    display: block;
+    padding: 0.55rem 1rem;
+    margin-left: -1rem;
+    border: 1px solid #2c2b2b;
+    color: #1b1b1b;
+    font-family: Montserrat;
+    font-size: 12px;
+    line-height: 2em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+  }
+  main #adcart {
+    overflow: hidden;
+  }
+  main #adcart .imgs {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main #adcart .imgs .small-imgs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    -webkit-transform: translate(3rem, 2rem);
+            transform: translate(3rem, 2rem);
+    z-index: 100;
+  }
+  main #adcart .imgs .small-imgs .img {
+    margin-bottom: 1rem;
+  }
+  main #adcart .imgs .largimage {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    margin-top: 10rem;
+  }
+  main #adcart .imgs .largimage img {
+    width: 100% !important;
+    -webkit-transform: translateX(7rem);
+            transform: translateX(7rem);
+  }
+  main #adcart .sale .text-input .text .name h2 {
+    font-size: 2.375rem;
+    line-height: 1.447em;
+    color: #2b2b2b;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    margin-bottom: 0px;
+  }
+  main #adcart .sale .text-input .text .cost p {
+    color: #757575;
+    font-size: 0.900rem;
+    margin-top: 0px;
+  }
+  main #adcart .sale .text-input .text .info {
+    font-size: 1rem;
+    color: #757575;
+  }
+  main #adcart .sale .text-input .text .input {
+    margin-top: 2rem;
+    display: block;
+    width: 100%;
+  }
+  main #adcart .sale .text-input .text .input input {
+    width: 17rem;
+  }
+  main #adcart .sale .text-input .text .input .butn button {
+    background-color: black;
+    color: white;
+    height: 3rem;
+    width: 10rem;
+    margin-left: 0rem;
+    padding: 0.600rem;
+  }
+  main #adcart .sale .text-input .text .product-info {
+    margin-top: 1.5rem;
+  }
+  main #adcart .sale .text-input .text .product-info ul {
+    padding-left: 0px;
+    list-style: none;
+  }
+  main #adcart .sale .text-input .text .product-info ul li {
+    padding-left: 0px;
+  }
+  main #adcart .sale .text-input .text .product-info ul li a {
+    text-decoration: none;
+    color: #737373;
   }
 }
 
@@ -1231,7 +1622,7 @@ main #video .video-about .about {
 
 main #video .video-about .about .text-top {
   color: #2b2b2b;
-  font-family: "Playfair Display",serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
 }
 
@@ -1512,6 +1903,10 @@ main #info-flower .butns-cards .butns .butn {
   cursor: pointer;
 }
 
+main #info-flower .cards {
+  overflow: hidden;
+}
+
 main #info-flower .cards .card {
   overflow: hidden;
   height: auto;
@@ -1572,7 +1967,6 @@ main #info-flower .cards .card .user .user-descript {
   display: inline-block;
   position: relative;
   bottom: 2rem;
-  left: 5rem;
   font-family: Lora, serif;
   font-size: 1rem;
   color: #737373;
@@ -1690,6 +2084,7 @@ main #acordion .accordian .card:nth-child(1) card-body {
 main #tab-top {
   margin-top: 6rem;
   overflow: hidden;
+  padding: 2rem;
 }
 
 main #tab-top .butns-cards .butns {
@@ -1707,6 +2102,11 @@ main #tab-top .butns-cards .butns .butn {
   letter-spacing: 0.1em;
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+main #tab-top .butns-cards .butns .active {
+  background-color: #F34F3F;
+  color: white;
 }
 
 main #tab-top .cards .card {
@@ -1728,6 +2128,11 @@ main #tab-top .cards .card .text p {
   font-family: Lora, serif;
   font-size: inherit;
   color: #737373;
+}
+
+main #tab-center {
+  overflow: hidden;
+  padding: 1rem;
 }
 
 main #tab-center .butns {
@@ -1754,7 +2159,7 @@ main #tab-center .cards {
 }
 
 main #tab-center .cards .card {
-  width: 200%;
+  width: 100%;
   border-left: none;
   border-right: none;
 }
