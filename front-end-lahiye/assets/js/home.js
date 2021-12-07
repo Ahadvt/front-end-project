@@ -22,8 +22,10 @@ $(document).scroll(function(){
         
         let menu=document.querySelector(".menuresponsive")
         
-        menu.style.display="none"
-        console.log(menu);
+        // menu.style.display="none"
+       let a= $(this).parent()
+       a.slideToggle()
+        
        
     })
     $(".icon-menu").click(function(){

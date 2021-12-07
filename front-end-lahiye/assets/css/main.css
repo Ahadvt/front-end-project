@@ -5,6 +5,20 @@
           box-sizing: border-box;
 }
 
+@media screen and (max-width: 440px) {
+  .head .logo {
+    position: absolute;
+    left: 0px;
+    margin-left: -6rem;
+  }
+  .head .menuresponsive {
+    width: 100% !important;
+  }
+  .head .icon-menu i {
+    font-size: 1rem;
+  }
+}
+
 @media screen and (max-width: 992px) {
   header {
     height: 3rem;
@@ -20,6 +34,8 @@
   }
   header nav .head .icon-menu {
     display: block !important;
+    position: absolute !important;
+    right: 5%;
   }
   header nav .head .menu {
     display: none;
@@ -31,6 +47,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    z-index: 2;
   }
   header nav .head .logo {
     position: absolute;
@@ -802,8 +819,10 @@ header nav .head .menu .menu-list li .elementInli .inTyography {
 
 header nav .head .icon-menu {
   position: absolute;
-  right: 10rem;
+  right: 5%;
   display: none;
+  font-size: 2rem;
+  top: 3%;
 }
 
 header nav .head .menuresponsive {
@@ -811,8 +830,12 @@ header nav .head .menuresponsive {
   display: none;
   background-color: white;
   width: 50%;
+  height: 100%;
   position: absolute;
-  right: 0px;
+  right: 0%;
+  top: 0%;
+  padding: 3rem;
+  color: black;
 }
 
 header nav .head .menuresponsive .icon-close {
@@ -820,6 +843,7 @@ header nav .head .menuresponsive .icon-close {
   right: 1rem;
   top: 1rem;
   color: orange;
+  font-size: 1.5rem;
 }
 
 header nav .head .menuresponsive ul {
@@ -917,62 +941,82 @@ header nav .head .icons .searchinput input {
 }
 
 main #img-animation .img-text {
-  background-image: url("../img/2.jpg");
   background-repeat: no-repeat;
-  background-size: 1300px;
+  background-size: 81.25rem;
   height: 26.563rem;
-  background-position: right;
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: animate 10s ease-in-out infinite;
-          animation: animate 10s ease-in-out infinite;
+  -webkit-animation-name: animate;
+          animation-name: animate;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
 }
 
 main #img-animation .img-text .text {
-  width: 29%;
-  position: relative;
-  left: 9.375rem;
-  text-align: inherit;
+  width: 100%;
+  padding-left: 10%;
   font-weight: 400;
   font-size: 1rem;
 }
 
 main #img-animation .img-text .text .text-center {
-  color: #737373;
-  text-align-last: left;
+  z-index: 6;
+  min-width: 429px;
+  max-width: 429px;
+  white-space: normal;
+  font-size: 17px;
+  line-height: 29px;
+  font-weight: 400;
+  color: #6d6a6a;
+  letter-spacing: 0px;
+  font-family: Lora;
+  visibility: inherit;
+  -webkit-transition: none 0s ease 0s;
+  transition: none 0s ease 0s;
+  text-align: inherit;
+  border-width: 0px;
+  margin: 0px;
+  padding: 0px;
+  min-height: 89px;
+  max-height: 89px;
+  opacity: 1;
+  -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+          transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  -webkit-transform-origin: 50% 50% 0px;
+          transform-origin: 50% 50% 0px;
 }
 
 @-webkit-keyframes animate {
   0% {
     background-image: url("../img/1.jpg");
-    z-index: 1;
   }
   50% {
     background-image: url("../img/2.jpg");
-    z-index: 2;
   }
   100% {
     background-image: url("../img/3.jpg");
-    z-index: 3;
   }
 }
 
 @keyframes animate {
   0% {
     background-image: url("../img/1.jpg");
-    z-index: 1;
   }
   50% {
     background-image: url("../img/2.jpg");
-    z-index: 2;
   }
   100% {
     background-image: url("../img/3.jpg");
-    z-index: 3;
   }
 }
 
@@ -1065,6 +1109,8 @@ main #cards .card-filter .filter-list .filter .Filters .info-price ul {
 
 main #cards .card-filter .cards .mycard {
   margin-bottom: 3rem;
+  -webkit-transition: .4s;
+  transition: .4s;
   text-align: center;
 }
 
@@ -1080,11 +1126,6 @@ main #cards .card-filter .cards .mycard .img img {
   height: auto;
 }
 
-main #cards .card-filter .cards .mycard .img img:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
 main #cards .card-filter .cards .mycard .name {
   margin-top: 1rem;
 }
@@ -1095,68 +1136,71 @@ main #cards .card-filter .cards .mycard .name a {
 }
 
 main #cards .card-filter .cards .mycard .price {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  overflow: hidden;
+  font: 1em sans-serif;
   color: #757575;
-}
-
-main #cards .card-filter .cards .mycard .price .cost {
-  -webkit-transition: .6s;
-  transition: .6s;
-  margin-left: 7rem;
+  width: 100%;
+  margin-top: 1rem;
 }
 
 main #cards .card-filter .cards .mycard .price .product {
-  position: absolute;
-  -webkit-transform: translateX(-2000px);
-          transform: translateX(-2000px);
-  transition: -6s;
-  margin-left: 6rem;
-}
-
-main #cards .card-filter .cards .mycard:hover .cost {
+  -webkit-transition: .4s;
+  transition: .4s;
+  font-size: 13px;
+  -webkit-transform: translateX(-6rem);
+          transform: translateX(-6rem);
   opacity: 0;
 }
 
+main #cards .card-filter .cards .mycard .price .cost {
+  opacity: 1;
+  -webkit-transition: .4s;
+  transition: .4s;
+  font-size: 13px;
+  -webkit-transform: translateX(-25rem);
+          transform: translateX(-25rem);
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
 main #cards .card-filter .cards .mycard:hover .product {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translateX(0rem);
+          transform: translateX(0rem);
+  opacity: 1;
+}
+
+main #cards .card-filter .cards .mycard:hover .cost {
+  -webkit-transform: translateX(2rem);
+          transform: translateX(2rem);
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+  opacity: 0;
+}
+
+main #cards .card-filter .cards .mycard:hover:hover img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 main #video {
   margin-bottom: 5rem;
-  position: relative;
-  top: 5rem;
   background-color: #F7F7F7;
-  height: 30rem;
+  height: auto;
 }
 
 main #video .video-about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 30rem;
+  height: auto;
+  padding: 8rem 0rem;
 }
 
 main #video .video-about .video {
   width: 50%;
   overflow: hidden;
-  position: relative;
 }
 
 main #video .video-about .video img {
   -webkit-transition: 1s;
   transition: 1s;
-  width: 105%;
+  width: 100%;
 }
 
 main #video .video-about .video img:hover {
@@ -1167,9 +1211,10 @@ main #video .video-about .video img:hover {
 main #video .video-about .video .icon {
   height: 5rem;
   width: 5rem;
-  position: absolute;
-  top: 40%;
-  left: 40%;
+  position: relative;
+  bottom: 50%;
+  -webkit-transform: translateX(250%);
+          transform: translateX(250%);
 }
 
 main #video .video-about .video .icon i {
@@ -1180,11 +1225,19 @@ main #video .video-about .video .icon i {
 }
 
 main #video .video-about .about {
-  width: 45%;
+  width: auto;
+  padding-left: 3rem;
+}
+
+main #video .video-about .about .text-top {
+  color: #2b2b2b;
+  font-family: "Playfair Display",serif;
+  font-weight: 400;
 }
 
 main #video .video-about .about ul {
   list-style: none;
+  padding: 0px;
 }
 
 main #video .video-about .about ul img {
@@ -1217,39 +1270,41 @@ main #flower .imgs .img-text .text p {
   font-size: 0.800rem;
 }
 
-main #mypar {
-  position: relative;
-}
-
 main #mypar .parallax-window {
   min-height: 400px;
   background: transparent;
 }
 
-main #mypar .text-input {
-  position: absolute;
-  left: 33%;
-  top: 30%;
-  text-align: center;
+main #mypar .parallax {
+  height: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-main #mypar .text-input .text {
+main #mypar .parallax .text-input .text {
   color: white;
   margin-bottom: 2rem;
 }
 
-main #mypar .text-input .myinput-btn {
+main #mypar .parallax .text-input .myinput-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main #mypar .text-input .myinput-btn input {
-  width: 18rem;
+main #mypar .parallax .text-input .myinput-btn input {
+  width: 100%;
   padding: 0.300rem;
 }
 
-main #mypar .text-input .myinput-btn .mybtn button {
+main #mypar .parallax .text-input .myinput-btn .mybtn button {
   background-color: red;
   color: white;
   width: 8rem;
@@ -1260,13 +1315,15 @@ main #mypar .text-input .myinput-btn .mybtn button {
   transition: .3s;
 }
 
-main #mypar .text-input .myinput-btn .mybtn button:hover {
+main #mypar .parallax .text-input .myinput-btn .mybtn button:hover {
   opacity: 1;
 }
 
 main #blog {
   background-color: #F8F8F8;
   text-align: center;
+  padding: 2rem;
+  padding-bottom: 6rem;
 }
 
 main #blog .texts {
@@ -1314,8 +1371,12 @@ main #slidebar .slide .slide-bar {
 }
 
 main #slidebar .slide .slide-bar .img {
-  -webkit-transform: translateX(20rem);
-          transform: translateX(20rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main #slidebar .slide .slide-bar .img img {
@@ -1341,14 +1402,14 @@ main #Productlist .text {
 }
 
 main #Productlist .text .text-top {
-  font-family: "Playfair Display",serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
   font-size: 3.125rem;
   line-height: 1.32em;
 }
 
 main #Productlist .text .text-bottom {
-  font-family: Lora,serif;
+  font-family: Lora, serif;
   font-size: 1.063rem;
   font-style: italic;
   text-transform: none;
@@ -1379,7 +1440,7 @@ main #adcart .sale .text-input .text .name h2 {
   font-size: 2.375rem;
   line-height: 1.447em;
   color: #2b2b2b;
-  font-family: "Playfair Display",serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
   margin-bottom: 0px;
 }
@@ -1460,7 +1521,7 @@ main #info-flower .cards .card {
 
 main #info-flower .cards .card .text-top h3 {
   color: #2b2b2b;
-  font-family: "Playfair Display",serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
   font-size: 1.438rem;
 }
@@ -1483,7 +1544,7 @@ main #info-flower .cards .card .text-bottom p span {
 
 main #info-flower .cards .card .head h3 {
   color: #2b2b2b;
-  font-family: "Playfair Display",serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
   margin-bottom: 2rem;
 }
@@ -1498,7 +1559,7 @@ main #info-flower .cards .card .user .user-img img {
 
 main #info-flower .cards .card .user .user-name {
   display: inline-block;
-  font-family: Montserrat,sans-serif;
+  font-family: Montserrat, sans-serif;
   letter-spacing: .1em;
   line-height: 1rem;
   position: relative;
@@ -1512,7 +1573,7 @@ main #info-flower .cards .card .user .user-descript {
   position: relative;
   bottom: 2rem;
   left: 5rem;
-  font-family: Lora,serif;
+  font-family: Lora, serif;
   font-size: 1rem;
   color: #737373;
 }
@@ -1524,7 +1585,7 @@ main #info-flower .cards .card .form {
 }
 
 main #info-flower .cards .card .form h2 {
-  font-family: "Playfair Display",serif;
+  font-family: "Playfair Display", serif;
   font-size: 30px;
   line-height: 1.4em;
   margin: 0 0 12px;
@@ -1660,11 +1721,11 @@ main #tab-top .cards .card {
 
 main #tab-top .cards .card .text {
   padding: 0rem 2rem;
-  font-family: Lora,serif;
+  font-family: Lora, serif;
 }
 
 main #tab-top .cards .card .text p {
-  font-family: Lora,serif;
+  font-family: Lora, serif;
   font-size: inherit;
   color: #737373;
 }
@@ -1700,7 +1761,7 @@ main #tab-center .cards .card {
 
 main #tab-center .cards .card .text {
   padding: 4rem 0rem;
-  font-family: Lora,serif;
+  font-family: Lora, serif;
   color: #737373;
 }
 
@@ -1750,7 +1811,7 @@ main #tab-end .cards .card {
 
 main #tab-end .cards .card .text {
   padding: 1rem 2rem;
-  font-family: Lora,serif;
+  font-family: Lora, serif;
   color: #737373;
 }
 
@@ -1790,7 +1851,7 @@ main #ShopListCard .cards .product .hoverProduct {
 
 main #ShopListCard .cards .product .hoverProduct .name h3 {
   text-transform: uppercase;
-  font-family: Montserrat,sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 1rem;
 }
 
@@ -1801,7 +1862,7 @@ main #ShopListCard .cards .product .hoverProduct .price p {
 main #ShopListCard .cards .product .hoverProduct .butn button {
   background-color: #F34F3F;
   text-transform: uppercase;
-  font-family: Montserrat,sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 1rem;
   color: white;
   border: none;
@@ -1907,45 +1968,225 @@ main #minicards .cards .cart .text .price {
   font-style: 13px;
 }
 
+main #firstAnimation {
+  margin-top: 5rem;
+}
+
+main #firstAnimation .animates .animate .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #firstAnimation .animates .animate .text h4 {
+  color: #2b2b2b;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+main #firstAnimation .animates .animate .animate-border {
+  height: 3px;
+  background-color: #cac9c9;
+  width: 100%;
+}
+
+main #firstAnimation .animates .animate .animate-border .animate-first {
+  -webkit-animation-name: first;
+          animation-name: first;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+main #firstAnimation .animates .animate .animate-border .animate-second {
+  -webkit-animation-name: second;
+          animation-name: second;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+main #firstAnimation .animates .animate .animate-border .animate-third {
+  -webkit-animation-name: third;
+          animation-name: third;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes first {
+  from {
+    height: 3px;
+    background-color: #F34F3F;
+    width: 0%;
+  }
+  to {
+    height: 3px;
+    background-color: #F34F3F;
+    width: 95%;
+  }
+}
+
+@keyframes first {
+  from {
+    height: 3px;
+    background-color: #F34F3F;
+    width: 0%;
+  }
+  to {
+    height: 3px;
+    background-color: #F34F3F;
+    width: 95%;
+  }
+}
+
+@-webkit-keyframes second {
+  from {
+    height: 3px;
+    background-color: #F34F3F;
+    width: 0%;
+  }
+  to {
+    height: 3px;
+    background-color: #F34F3F;
+    width: 80%;
+  }
+}
+
+@keyframes second {
+  from {
+    height: 3px;
+    background-color: #F34F3F;
+    width: 0%;
+  }
+  to {
+    height: 3px;
+    background-color: #F34F3F;
+    width: 80%;
+  }
+}
+
+@-webkit-keyframes third {
+  from {
+    height: 3px;
+    background-color: #F34F3F;
+    width: 0%;
+  }
+  to {
+    height: 3px;
+    background-color: #F34F3F;
+    width: 55%;
+  }
+}
+
+@keyframes third {
+  from {
+    height: 3px;
+    background-color: #F34F3F;
+    width: 0%;
+  }
+  to {
+    height: 3px;
+    background-color: #F34F3F;
+    width: 55%;
+  }
+}
+
+main #secondAnimation {
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+}
+
+main #secondAnimation .animates .animate .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #secondAnimation .animates .animate .text h4 {
+  color: #2b2b2b;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+main #secondAnimation .animates .animate .animate-border {
+  height: 3px;
+  background-color: #cac9c9;
+  width: 100%;
+}
+
+main #secondAnimation .animates .animate .animate-border .animate-first {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+main #secondAnimation .animates .animate .animate-border .animate-second {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+main #secondAnimation .animates .animate .animate-border .animate-third {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 footer {
   background-color: #FEFAF3;
 }
 
 footer .topFooter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-bottom: 1px solid gray;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid #cec9c9;
 }
 
 footer .topFooter h6 {
-  font-size: 0.900rem;
   font-weight: 400;
   margin-top: 3rem;
+  font-family: Montserrat;
+  font-size: 12px;
 }
 
 footer .topFooter ul {
-  margin-top: 1rem;
   list-style: none;
   padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+
+footer .topFooter ul li {
+  padding: 0px;
+  margin: 0px;
 }
 
 footer .topFooter ul li a {
   text-decoration: none;
-  color: #757575;
-  font-size: 0.800rem;
+  font-family: Montserrat, sans-serif;
+  line-height: 24px;
+  font-size: 12px;
+  color: #8b8b8b;
 }
 
 footer .bottomFooter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  padding: 1rem;
 }
 
 footer .bottomFooter .text {
@@ -1957,8 +2198,19 @@ footer .bottomFooter .text {
           justify-content: space-evenly;
 }
 
+footer .bottomFooter img {
+  cursor: pointer;
+}
+
 footer .bottomFooter p {
-  font-size: 0.813rem;
+  font-size: 11px;
   color: #757575;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+footer .bottomFooter p:hover {
+  color: orange;
 }
 /*# sourceMappingURL=main.css.map */

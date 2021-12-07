@@ -7,7 +7,9 @@ $(document).ready(function(){
              let cards=$(card).parent()
              cards.children().hide()
              $(card).show()
-            
+             
+        
+             
     
         $(btn).click(function(){
             $(this).parent().children().not(this).css("backgroundColor","white")
@@ -16,6 +18,7 @@ $(document).ready(function(){
              $(card).show()
              $(btn).css("backgroundColor", "#F34F3F")
              $(btn).css("color", "white")
+            
              
              let test=$(this).hasClass("center")
              
