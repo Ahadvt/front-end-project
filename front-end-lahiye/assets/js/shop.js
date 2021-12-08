@@ -1,6 +1,11 @@
 $(document).ready(function(){
 
 let btns=document.querySelectorAll(".butns .butn")
+let btna=document.querySelector(".butns .butn")
+$(btna).css("backgroundColor", "#F34F3F")
+$(btna).css("color", "white")
+
+
 btns.forEach(btn=>{
     let id= $(btn).attr("data-id")
          let card=document.getElementById(id)
@@ -11,7 +16,7 @@ btns.forEach(btn=>{
 
     $(btn).click(function(){
         $(this).parent().children().not(this).css("backgroundColor","white")
-        $(this).parent().children().not(this).css("color","black")
+        $(this).parent().children().not(this).css("color","#1b1b1b")
         cards.children().hide()
          $(card).show()
          $(btn).css("backgroundColor", "#F34F3F")

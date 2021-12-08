@@ -12,11 +12,10 @@ $(document).ready(function(){
         }else{
             $("#secondheader").hide()
         }
-
         
     })
     
-        let search=$(".search-icon")
+       let search=$(".search-icon")
         search.click(function(){
            let searchInput= $(this).next("div")
            searchInput.slideToggle(200)
@@ -24,7 +23,6 @@ $(document).ready(function(){
            
            
         })
-    
         $(".icon-close").click(function(){
             
             let menu=document.querySelector(".menuresponsive")
@@ -52,29 +50,30 @@ $(document).ready(function(){
     let Firstanimate=$("div[data-id='animate-first']")
     let Secondanimate=$("div[data-id='animate-second']")
     $(document).scroll(function(){
-        
-        console.log(Secondanimate);
-        
         let scroll=$(document).scrollTop()
         if(scroll>200){
         Thirdanimate.css("animation-name","third")
         Firstanimate.css("animation-name","first")
         Secondanimate.css("animation-name","second")
         }
-       
-
-        
-           
-            
-       
-        
-        
-        
-        
-        
-     
-
         
     })
-        
+
+
+ 
+
     })
+
+   
+    let progresvalue=0
+    let progresvaluend=65
+
+    // let progres=setInterval(() => {
+    //     progresvalue++
+    //     el.textContent= `${progresvalue}%`
+    //     if(progresvalue==progresvaluend){
+    //         clearInterval(progres)
+
+    //     }
+    // },20);
+    // console.log(progres);

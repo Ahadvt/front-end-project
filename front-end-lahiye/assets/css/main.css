@@ -6,6 +6,9 @@
 }
 
 @media screen and (max-width: 440px) {
+  .head {
+    width: auto;
+  }
   .head .logo {
     position: absolute;
     left: 0px;
@@ -21,6 +24,7 @@
 
 @media screen and (max-width: 992px) {
   header {
+    width: auto;
     height: 3rem;
   }
   header .icons {
@@ -56,6 +60,7 @@
 }
 
 header {
+  overflow: hidden;
   height: 6.5rem;
   background-color: white;
 }
@@ -69,6 +74,7 @@ header #secondheader {
   z-index: 2;
   height: 6.5rem;
   display: none;
+  overflow: hidden;
 }
 
 header #secondheader .menu {
@@ -449,7 +455,13 @@ header nav .head {
 }
 
 header nav .head .logo img {
-  width: 13.313rem;
+  width: 11.313rem;
+}
+
+@media screen and (max-width: 720px) {
+  header nav .head .logo img {
+    width: 8rem !important;
+  }
 }
 
 header nav .head .menu {
@@ -821,8 +833,8 @@ header nav .head .icon-menu {
   position: absolute;
   right: 5%;
   display: none;
-  font-size: 2rem;
-  top: 3%;
+  font-size: 0.900rem;
+  top: 5%;
 }
 
 header nav .head .menuresponsive {
@@ -1249,13 +1261,19 @@ header nav .head .icons .searchinput input {
     letter-spacing: 0.1em;
     cursor: pointer;
   }
+  main #info-flower .cards .card .user .user-descript {
+    display: inline-block;
+    position: relative;
+    top: 2rem;
+    font-family: Lora, serif;
+    font-size: 1rem;
+    color: #737373;
+    width: 80%;
+  }
   main #adcart {
     overflow: hidden;
   }
   main #adcart .imgs {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1265,20 +1283,24 @@ header nav .head .icons .searchinput input {
     display: -ms-flexbox;
     display: flex;
     position: absolute;
-    -webkit-transform: translate(3rem, 2rem);
-            transform: translate(3rem, 2rem);
+    margin-top: 2rem;
     z-index: 100;
   }
+  main #adcart .imgs .small-imgs img {
+    margin-left: 2rem;
+  }
   main #adcart .imgs .small-imgs .img {
+    margin-left: -1rem;
     margin-bottom: 1rem;
   }
   main #adcart .imgs .largimage {
     -webkit-transform: translate(0);
             transform: translate(0);
     margin-top: 10rem;
+    padding: 0px;
   }
   main #adcart .imgs .largimage img {
-    width: 100% !important;
+    width: 90% !important;
     -webkit-transform: translateX(7rem);
             transform: translateX(7rem);
   }
@@ -1514,7 +1536,7 @@ main #cards .card-filter .cards .mycard .img {
 main #cards .card-filter .cards .mycard .img img {
   -webkit-transition: .4s;
   transition: .4s;
-  height: auto;
+  width: 100%;
 }
 
 main #cards .card-filter .cards .mycard .name {
@@ -1786,6 +1808,7 @@ main #slidebar .slide .slide-bar .info-name .name span {
 
 main #Productlist {
   background-color: #FAFAF9;
+  overflow: hidden;
 }
 
 main #Productlist .text {
@@ -1806,6 +1829,10 @@ main #Productlist .text .text-bottom {
   text-transform: none;
   letter-spacing: 0;
   color: #6d6a6a;
+}
+
+main #adcart {
+  overflow: hidden;
 }
 
 main #adcart .imgs {
@@ -1886,14 +1913,18 @@ main #adcart .sale .text-input .text .product-info ul li a {
   color: #737373;
 }
 
+main #info-flower {
+  overflow: hidden;
+}
+
 main #info-flower .butns-cards .butns {
-  margin-left: 3rem;
+  padding-left: 2rem;
 }
 
 main #info-flower .butns-cards .butns .butn {
   width: auto;
   padding: 0.55rem 1rem;
-  border: 1px solid #2c2b2b;
+  border: 1px solid #e2e0e0;
   color: #1b1b1b;
   font-family: Montserrat;
   font-size: 12px;
@@ -1904,81 +1935,77 @@ main #info-flower .butns-cards .butns .butn {
 }
 
 main #info-flower .cards {
-  overflow: hidden;
+  margin-bottom: 2rem;
 }
 
-main #info-flower .cards .card {
-  overflow: hidden;
-  height: auto;
-  padding: 4rem;
-  width: 100%;
+main #info-flower .cards .cart {
+  border: 1px solid #ccc9c9;
 }
 
-main #info-flower .cards .card .text-top h3 {
+main #info-flower .cards .cart .text-top h3 {
   color: #2b2b2b;
   font-family: "Playfair Display", serif;
   font-weight: 400;
   font-size: 1.438rem;
 }
 
-main #info-flower .cards .card .text-top p {
+main #info-flower .cards .cart .text-top p {
   font-weight: bold;
 }
 
-main #info-flower .cards .card .text-top p span {
+main #info-flower .cards .cart .text-top p span {
   font-weight: 300;
 }
 
-main #info-flower .cards .card .text-bottom p {
+main #info-flower .cards .cart .text-bottom p {
   font-weight: bold;
 }
 
-main #info-flower .cards .card .text-bottom p span {
+main #info-flower .cards .cart .text-bottom p span {
   font-weight: 300;
 }
 
-main #info-flower .cards .card .head h3 {
+main #info-flower .cards .cart .head h3 {
   color: #2b2b2b;
   font-family: "Playfair Display", serif;
   font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+main #info-flower .cards .cart .user {
   margin-bottom: 2rem;
 }
 
-main #info-flower .cards .card .user .user-img {
+main #info-flower .cards .cart .user .user-img {
   display: inline-block;
 }
 
-main #info-flower .cards .card .user .user-img img {
-  width: 60%;
+main #info-flower .cards .cart .user .user-img img {
+  width: 5rem;
 }
 
-main #info-flower .cards .card .user .user-name {
+main #info-flower .cards .cart .user .user-name {
   display: inline-block;
   font-family: Montserrat, sans-serif;
   letter-spacing: .1em;
-  line-height: 1rem;
-  position: relative;
-  right: 1rem;
-  bottom: 1rem;
   font-size: 12px;
 }
 
-main #info-flower .cards .card .user .user-descript {
+main #info-flower .cards .cart .user .user-descript {
   display: inline-block;
-  position: relative;
-  bottom: 2rem;
   font-family: Lora, serif;
   font-size: 1rem;
   color: #737373;
+  margin-bottom: 2rem;
 }
 
-main #info-flower .cards .card .form {
+main #info-flower .cards .cart .form {
   font-weight: 400;
   color: #757575;
   font-size: 13px;
 }
 
-main #info-flower .cards .card .form h2 {
+main #info-flower .cards .cart .form h2 {
   font-family: "Playfair Display", serif;
   font-size: 30px;
   line-height: 1.4em;
@@ -1987,12 +2014,12 @@ main #info-flower .cards .card .form h2 {
   color: #2b2b2b;
 }
 
-main #info-flower .cards .card .form input {
+main #info-flower .cards .cart .form input {
   display: block;
   width: 100%;
 }
 
-main #info-flower .cards .card .form .mybtn button {
+main #info-flower .cards .cart .form .mybtn button {
   width: auto;
   background-color: #F34F3F;
   color: white;
@@ -2227,6 +2254,8 @@ main #ShopListCard {
 main #ShopListCard .cards .product {
   -webkit-transition: .3s;
   transition: .3s;
+  position: relative;
+  padding: 2rem;
 }
 
 main #ShopListCard .cards .product img {
@@ -2247,17 +2276,40 @@ main #ShopListCard .cards .product:hover .hoverProduct {
 main #ShopListCard .cards .product .hoverProduct {
   text-align: center;
   position: absolute;
-  top: 75%;
-  margin-left: 3.2rem;
+  top: 30%;
+  left: 30%;
   opacity: 0;
   -webkit-transition: .3s;
   transition: .3s;
+}
+
+@media screen and (max-width: 921px) {
+  main #ShopListCard .cards .product .hoverProduct {
+    position: absolute;
+    top: 43%;
+    left: 37%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main #ShopListCard .cards .product .hoverProduct {
+    width: 1rem;
+  }
 }
 
 main #ShopListCard .cards .product .hoverProduct .name h3 {
   text-transform: uppercase;
   font-family: Montserrat, sans-serif;
   font-size: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  main #ShopListCard .cards .product .hoverProduct .name h3 {
+    font-size: 0.400rem;
+  }
+  main #ShopListCard .cards .product .hoverProduct .name h3 p {
+    font-size: 0.300rem;
+  }
 }
 
 main #ShopListCard .cards .product .hoverProduct .price p {
@@ -2272,6 +2324,13 @@ main #ShopListCard .cards .product .hoverProduct .butn button {
   color: white;
   border: none;
   padding: .5rem 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  main #ShopListCard .cards .product .hoverProduct .butn button {
+    font-size: 0.300rem;
+    padding: 0rem 1rem;
+  }
 }
 
 main #caruselproduct {
@@ -2356,6 +2415,12 @@ main #minicards .cards .cart .img img {
   -webkit-transition: .5s;
   transition: .5s;
   overflow: hidden;
+}
+
+@media screen and (max-width: 500px) {
+  main #minicards .cards .cart .img img {
+    width: 5rem;
+  }
 }
 
 main #minicards .cards .cart .img img:hover {
@@ -2556,6 +2621,7 @@ main #secondAnimation .animates .animate .animate-border .animate-third {
 
 footer {
   background-color: #FEFAF3;
+  overflow: hidden;
 }
 
 footer .topFooter {
