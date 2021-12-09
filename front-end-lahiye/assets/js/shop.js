@@ -1,5 +1,19 @@
 $(document).ready(function(){
 
+    $(".content .icon").css("display","none")
+    $(document).scroll(function(){
+        let scrolpax=$(document).scrollTop()
+        
+        if (scrolpax>600) {
+            $(".content .icon").css("display","flex")
+        }else{
+            $(".content .icon").css("display","none")
+        }
+        $(".content .icon").click(function(){
+            $(document).scrollTop(0)
+        })
+    })
+
 let btns=document.querySelectorAll(".butns .butn")
 let btna=document.querySelector(".butns .butn")
 $(btna).css("backgroundColor", "#F34F3F")

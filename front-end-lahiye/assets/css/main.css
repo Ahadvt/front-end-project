@@ -60,7 +60,6 @@
 }
 
 header {
-  overflow: hidden;
   height: 6.5rem;
   background-color: white;
 }
@@ -74,7 +73,6 @@ header #secondheader {
   z-index: 2;
   height: 6.5rem;
   display: none;
-  overflow: hidden;
 }
 
 header #secondheader .menu {
@@ -451,7 +449,6 @@ header nav .head {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.625rem;
-  overflow: hidden;
 }
 
 header nav .head .logo img {
@@ -834,7 +831,7 @@ header nav .head .icon-menu {
   right: 5%;
   display: none;
   font-size: 0.900rem;
-  top: 5%;
+  top: 2.8rem;
 }
 
 header nav .head .menuresponsive {
@@ -890,11 +887,109 @@ header nav .head .icons {
 header nav .head .icons .basket-icon i {
   color: rgba(0, 0, 0, 0.671);
   font-size: 1.063rem;
+  height: auto;
+}
+
+header nav .head .icons .basket-icon:hover .basket-products {
+  visibility: visible;
 }
 
 header nav .head .icons .basket-icon span {
   margin-left: 0.313rem;
   font-size: 0.813;
+}
+
+header nav .head .icons .basket-icon .basket-products {
+  position: absolute;
+  z-index: 10;
+  top: 109px;
+  right: 10%;
+  background-color: white;
+  padding: 2rem;
+  color: #757575;
+  -webkit-transition: .1s;
+  transition: .1s;
+  visibility: hidden;
+}
+
+header nav .head .icons .basket-icon .basket-products .Basket-top {
+  z-index: 11;
+  height: auto;
+}
+
+header nav .head .icons .basket-icon .basket-products .Basket-top ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+header nav .head .icons .basket-icon .basket-products .Basket-top ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  font-size: 13px;
+  margin-bottom: 1rem;
+}
+
+header nav .head .icons .basket-icon .basket-products .Basket-top ul li .img img {
+  width: 4rem;
+}
+
+header nav .head .icons .basket-icon .basket-products .Basket-top ul li .delete-name {
+  margin-left: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav .head .icons .basket-icon .basket-products .Basket-top ul li .delete-name i {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  color: red;
+  font-size: 1rem;
+}
+
+header nav .head .icons .basket-icon .basket-products .Basket-top ul li .count-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 35%;
+  left: 53%;
+}
+
+header nav .head .icons .basket-icon .basket-products .Basket-top ul .total-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+header nav .head .icons .basket-icon .basket-products .Basket-bottom {
+  font-size: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header nav .head .icons .basket-icon .basket-products .Basket-bottom .total-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav .head .icons .basket-icon .basket-products .Basket-bottom .total-price .total {
+  margin-left: 10px;
+}
+
+header nav .head .icons .basket-icon .basket-products .btns btn {
+  width: 10px !important;
 }
 
 header nav .head .icons .search-icon {
@@ -1562,6 +1657,7 @@ main #cards .card-filter .cards .mycard .price .product {
   -webkit-transform: translateX(-6rem);
           transform: translateX(-6rem);
   opacity: 0;
+  cursor: pointer;
 }
 
 main #cards .card-filter .cards .mycard .price .cost {
@@ -1793,12 +1889,12 @@ main #slidebar .slide .slide-bar .img {
 }
 
 main #slidebar .slide .slide-bar .img img {
-  width: 10%;
+  width: 20%;
 }
 
 main #slidebar .slide .slide-bar .info-name .info {
   font-style: italic;
-  font-size: 2rem;
+  font-size: 1rem;
   color: #757575;
 }
 
@@ -2115,7 +2211,7 @@ main #tab-top {
 }
 
 main #tab-top .butns-cards .butns {
-  margin-left: 0rem;
+  margin-left: 0px;
 }
 
 main #tab-top .butns-cards .butns .butn {
@@ -2128,7 +2224,10 @@ main #tab-top .butns-cards .butns .butn {
   font-weight: 500;
   letter-spacing: 0.1em;
   cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid rgba(158, 155, 155, 0.125);
+  border-bottom: none;
+  margin-left: 1px;
+  margin-bottom: 1px;
 }
 
 main #tab-top .butns-cards .butns .active {
@@ -2140,10 +2239,8 @@ main #tab-top .cards .card {
   overflow: hidden;
   height: auto;
   padding: 3rem 1rem 2rem 1rem;
-  margin-top: 0.100rem;
   margin-bottom: 0px;
   width: 100%;
-  border-top: none;
 }
 
 main #tab-top .cards .card .text {
@@ -2617,6 +2714,31 @@ main #secondAnimation .animates .animate .animate-border .animate-third {
           animation-duration: 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+main .content .icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #F34F3F;
+  color: white;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .content .active {
+  display: none;
 }
 
 footer {

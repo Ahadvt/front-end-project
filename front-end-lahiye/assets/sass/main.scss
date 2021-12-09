@@ -76,7 +76,7 @@
 }
 
 header {
-    overflow: hidden;
+    // overflow: hidden;
     #secondheader {
         background-color: white;
         position: fixed;
@@ -86,7 +86,7 @@ header {
         z-index: 2;
         height: 6.5rem;
         display: none;
-        overflow: hidden;
+        // overflow: hidden;
 
         .menu {
             display: block;
@@ -492,7 +492,7 @@ header {
             height: 6.5rem;
             align-items: center;
             padding: 0.625rem;
-            overflow: hidden;
+            // overflow: hidden;
 
 
 
@@ -911,7 +911,7 @@ header {
                 right: 5%;
                 display: none;
                 font-size: 0.900rem;
-                top: 5%;
+                top: 2.8rem;
             }
 
             .menuresponsive {
@@ -960,18 +960,110 @@ header {
 
             .icons {
                 display: flex;
-
+                
                 justify-content: space-evenly;
+                // position: relative;
 
                 .basket-icon {
+                    
                     i {
                         color: rgba(0, 0, 0, 0.671);
+                        
                         font-size: 1.063rem;
+                        height: auto;
+                         
+                    }
+                    &:hover{
+                        .basket-products{
+                            visibility: visible;
+                        }
                     }
 
                     span {
                         margin-left: 0.313rem;
                         font-size: 0.813;
+                    }
+                    .basket-products{
+                        position: absolute;
+                        z-index: 10;
+                        top: 109px;
+                        right: 10%;
+                        background-color: white;
+                        padding: 2rem;
+                        color: #757575;
+                        transition: .1s;
+                        visibility: hidden;
+                        
+
+                       .Basket-top{
+                        
+                           z-index: 11;
+                           height: auto;
+
+                        ul{
+                            list-style: none;
+                            margin: 0px;
+                            padding: 0px;
+                            
+                            
+                            li{
+                                display: flex;
+                                position: relative;
+                                font-size: 13px;
+                                .img{
+                                    img{
+                                        width: 4rem;
+                                    }
+                                }
+                                .delete-name{
+                                    margin-left: 2rem;
+                                   display: flex;
+                                   i{
+                                       margin-left: 1rem;
+                                       margin-top: 1rem;
+                                       color: red;
+                                       font-size: 1rem;
+                                   }
+                                   
+                                   
+                                }
+                                .count-price{
+                                    display: flex;
+                                    position: absolute;
+                                    top: 35%;
+                                    left: 53%;
+
+                                }
+                                margin-bottom: 1rem;
+                               
+
+                            }
+                            .total-price{
+                                 
+                                display: flex;
+                                justify-content: space-between;
+                                margin-bottom: 1rem;
+                                
+                            }
+                        }
+                       }
+                       .Basket-bottom{
+                           font-size: 13px;
+                       display: flex;
+                       justify-content: space-around;
+                       .total-price{
+                           display: flex;
+                           .total{
+                               margin-left: 10px;
+                           }
+                       }
+                       }
+                       .btns{
+                           btn{
+                               width: 10px !important;
+                           }
+                       }
+
                     }
                 }
 
@@ -1815,6 +1907,7 @@ main {
                             font-size: 13px;
                             transform: translateX(-6rem);
                             opacity: 0;
+                            cursor: pointer;
                         }
 
                         .cost {
@@ -2059,15 +2152,16 @@ main {
                     justify-content: center;
 
                     img {
-                        width: 10%;
+                        width: 20%;
                     }
                 }
 
                 .info-name {
                     .info {
                         font-style: italic;
-                        font-size: 2rem;
+                        font-size: 1rem;
                         color: #757575;
+
                     }
 
                     .name {
@@ -2437,16 +2531,17 @@ main {
         margin-top: 6rem;
         overflow: hidden;
         padding: 2rem;
+        // margin-bottom: 2px;
 
         .butns-cards {
             .butns {
-                margin-left: 0rem;
+                margin-left: 0px;
 
 
                 .butn {
                     width: auto;
                     padding: 0.55rem 1rem;
-
+                 
                     color: #1b1b1b;
                     font-family: Montserrat;
                     font-size: 12px;
@@ -2454,7 +2549,12 @@ main {
                     font-weight: 500;
                     letter-spacing: 0.1em;
                     cursor: pointer;
-                    border: 1px solid rgba(0, 0, 0, .125);
+                    border: 1px solid rgba(158, 155, 155, 0.125);
+                    border-bottom: none;
+                    // border-left: none;
+                    margin-left: 1px;
+                    margin-bottom: 1px;
+                    
 
                 }
 
@@ -2471,10 +2571,10 @@ main {
                 overflow: hidden;
                 height: auto;
                 padding: 3rem 1rem 2rem 1rem;
-                margin-top: 0.100rem;
+                
                 margin-bottom: 0px;
                 width: 100%;
-                border-top: none;
+                // border-top: none;
 
                 .text {
                     padding: 0rem 2rem;
@@ -2922,6 +3022,31 @@ main {
             }
         }
     }
+    .content{
+
+    
+    .icon{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #F34F3F;
+        color: white;
+        font-size: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    
+      
+    
+    }
+    .active{
+        display: none;
+    }
+}
 }
 
 footer {

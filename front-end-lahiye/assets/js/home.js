@@ -1,5 +1,17 @@
 $(document).ready(function(){
-
+    $(".content .icon").css("display","none")
+    $(document).scroll(function(){
+        let scrolpax=$(document).scrollTop()
+        
+        if (scrolpax>600) {
+            $(".content .icon").css("display","flex")
+        }else{
+            $(".content .icon").css("display","none")
+        }
+        $(".content .icon").click(function(){
+            $(document).scrollTop(0)
+        })
+    })
   
 $(document).scroll(function(){
     $("#secondheader").hide()
@@ -80,7 +92,151 @@ $('.owl-carousel').owlCarousel({
 
 
 $('.parallax-window').parallax({imageSrc: './assets/img/h3-background-img.jpg'});
+
+
+let AdtoCard=document.querySelectorAll(".adCart")
+let Products=document.querySelector(".basket-products .Basket-top")
+
+AdtoCard.forEach(btn=>{
+    
+    btn.onclick=function(ev){
+        ev.preventDefault()
+        let ID=this.parentNode.parentNode.getAttribute("data-id")
+        let Img=this.parentNode.parentNode.children[0].children[0].getAttribute("src")
+        let Name=this.parentNode.parentNode.children[1].children[0].innerText;
+        let Price=this.parentNode.children[1].innerText;
+        
+        if (localStorage.getItem("basket")==null) {
+            localStorage.setItem("basket",JSON.stringify([]))
+        }
+        let basket=JSON.parse(localStorage.getItem("basket"))
+        let exsistProduct=basket.find((p)=>p.id==ID)
+        if (exsistProduct===undefined) {
+            let product={
+                id:ID,
+                img:Img,
+                name:Name,
+                price:Price,
+                count:1
+            }
+            basket.push(product)
+            getProductbody(product)
+           
+        }else{
+            // let Count=document.getElementById(`${exsistProduct.id}`)
+            // +Count.innerHTML++;
+            exsistProduct.count++;
+
+        }
+
+        localStorage.setItem("basket", JSON.stringify(basket))
+        calcCount()
+        TotalPrice()
+        
+        getProducts()
+    }
 })
+
+calcCount()
+function calcCount(){
+    if (localStorage.getItem("basket")==null) {
+        localStorage.setItem("basket",JSON.stringify([]))
+    }
+    let countProduct= document.querySelector(".basket-icon span")
+   
+    let basket=JSON.parse(localStorage.getItem("basket"))
+    countProduct.innerHTML=basket.length
+}
+TotalPrice()
+
+function TotalPrice(){
+    if (localStorage.getItem("basket")==null) {
+        localStorage.setItem("basket",JSON.stringify([]))
+    }
+    getProducts()
+    
+    // let Price=document.querySelector(".count-price .price")
+    // let pricetext = $(Price).text()
+    let basket=JSON.parse(localStorage.getItem("basket"))
+
+    let totalpr =document.querySelector(".total-price .total p")
+    
+
+   let total= basket.reduce((totall,p)=>{
+       totall = parseInt(totall)
+       price = parseInt(p.price)
+       count = parseInt(p.count)
+        return totall += price * count
+    },0)
+
+    $(totalpr).text(total)
+
+}
+
+getProducts()
+   function getProducts(){
+       let basket=JSON.parse(localStorage.getItem("basket"))
+       
+       let baskettop = document.querySelector(".Basket-top")
+       baskettop.innerHTML = ""
+       basket.forEach((p)=>{
+         getProductbody(p)
+       })
+   }
+
+   function getProductbody(product){
+
+Products.innerHTML+=`
+<ul>
+                                <li data-id="${product.id}">
+                                    <div class="img">
+                                        <img src="${product.img}" alt="">
+                                    </div>
+                                    <div class="delete-name">
+                                        <div class="name">
+                                            <p>${product.name}</p>
+                                        </div>
+                                
+                                        <i class="fas fa-times" onclick="removeProduct(this)" ></i>
+                                    </div>
+                                    <div class="count-price">
+                                         <div id="${product.id}" class="count">
+                                             ${product.count} x 
+                                         </div>
+                                         <div class="price">
+                                             ${product.price}
+                                         </div>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                            
+`   
+    
+   }
+   
+ 
+ let category=$("#category li")
+
+ category.click(function(){
+     
+ })
+
+
+})
+
+function removeItem(id){
+    let basket=JSON.parse(localStorage.getItem("basket"))
+    const newItemSet=basket.filter((i)=>i.id !==id)
+    localStorage.setItem("basket",JSON.stringify(newItemSet))
+}
+
+function removeProduct(e){
+    removeItem(e.parentElement.parentElement.getAttribute("data-id"))
+    e.parentElement.parentElement.remove();
+    // calcCount()
+    // TotalPrice()
+}
 
 
 

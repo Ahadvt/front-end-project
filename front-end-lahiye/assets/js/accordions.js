@@ -52,8 +52,8 @@ $(document).ready(function(){
 
 
         $(document).ready(function(){
+
             $(".card-header").click(function(){
-             
              if($(this).next(".card-body").hasClass("active")){
                $(this).next(".card-body").removeClass("active").slideUp()
               $(this).children("span").removeClass("fa-minus").addClass("fa-plus")	
