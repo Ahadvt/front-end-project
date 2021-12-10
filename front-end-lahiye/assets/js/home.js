@@ -12,6 +12,21 @@ $(document).ready(function(){
             $(document).scrollTop(0)
         })
     })
+
+    $(".categoryF").click(function(){
+      let id=  $(this).attr("id")
+      let cards=document.querySelectorAll(".all")
+      cards.forEach(card=>{
+        card.style.display="none"
+        if ($(this).attr("id")==1) {
+            card.style.display="block"
+        }
+        if (card.getAttribute("data-id")==$(this).attr("id")) {
+            
+            card.style.display="block"
+        }
+      })
+    })
   
 $(document).scroll(function(){
     $("#secondheader").hide()

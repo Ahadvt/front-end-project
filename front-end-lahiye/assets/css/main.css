@@ -1227,12 +1227,15 @@ header nav .head .icons .searchinput input {
   }
   main #tab-top {
     margin-top: 6rem;
+    margin-bottom: 2rem;
     overflow: hidden;
     padding: 0px;
   }
   main #tab-top .butns-cards .butns {
     margin: 0px;
     display: block;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
   main #tab-top .butns-cards .butns .butn {
     width: auto;
@@ -1256,6 +1259,7 @@ header nav .head .icons .searchinput input {
   }
   main #tab-end .butns-cards .butns {
     width: 100% !important;
+    margin-bottom: 1rem;
     margin-right: 0px;
     padding-right: 0px;
   }
@@ -1302,6 +1306,7 @@ header nav .head .icons .searchinput input {
     margin-top: 12rem;
     margin-left: -1.700rem;
     display: block;
+    margin-bottom: -2rem;
   }
   main #tab-center .butns .butn {
     width: auto;
@@ -2030,6 +2035,12 @@ main #info-flower .butns-cards .butns .butn {
   cursor: pointer;
 }
 
+@media screen and (max-width: 400px) {
+  main #info-flower .butns-cards .butns .butn {
+    border-bottom: none;
+  }
+}
+
 main #info-flower .cards {
   margin-bottom: 2rem;
 }
@@ -2394,6 +2405,14 @@ main #ShopListCard .cards .product .hoverProduct {
   }
 }
 
+@media screen and (max-width: 400px) {
+  main #ShopListCard .cards .product .hoverProduct {
+    width: 1rem;
+    top: 40%;
+    left: 45%;
+  }
+}
+
 main #ShopListCard .cards .product .hoverProduct .name h3 {
   text-transform: uppercase;
   font-family: Montserrat, sans-serif;
@@ -2481,6 +2500,12 @@ main #caruselproduct .info {
   margin-top: 1rem;
 }
 
+@media screen and (max-width: 400px) {
+  main #caruselproduct .info {
+    margin-left: 2.9rem;
+  }
+}
+
 main #caruselproduct .info .cost {
   font-size: .800rem;
   color: #757575;
@@ -2527,6 +2552,13 @@ main #minicards .cards .cart .img img:hover {
 
 main #minicards .cards .cart .text {
   text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+  main #minicards .cards .cart .text {
+    font-size: 13px;
+    margin-right: 1rem;
+  }
 }
 
 main #minicards .cards .cart .text .price {
@@ -2743,7 +2775,6 @@ main .content .active {
 
 footer {
   background-color: #FEFAF3;
-  overflow: hidden;
 }
 
 footer .topFooter {

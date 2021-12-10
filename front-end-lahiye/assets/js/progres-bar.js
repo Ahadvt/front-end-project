@@ -121,72 +121,10 @@ $(document).ready(function(){
             }
         },20);
 
-    })
-
-     
-     let dataId2=second.getAttribute("data-id")
-   
-    let progresvalue2=0
-    let progresvaluend2= parseInt(dataId2)
-    
-
-    
-    // let progress=setInterval(() => {
-    //     progresvalue2++
-    //     second.textContent= `${progresvalue2}%`
-    //     if(progresvalue2==progresvaluend3 ){
-    //         clearInterval(progress)
-    //     }
-    // },20);
-
-    // let progresss=setInterval(() => {
-    //     progresvalue3++
-    //     third.textContent= `${progresvalue3}%`
-    //     if(progresvalue3==progresvaluend3 ){
-    //         clearInterval(progresss)
-    //     }
-    // },20);
-
- 
+    }) 
 
     })
 
-    // let first=document.querySelector(".progresfirst")
-    // // let first=document.querySelector(".progresfirst")
-    // let second=document.querySelector(".progressecond")
-    // let third=document.querySelector(".profresthird")
-    //  let dataId1=first.getAttribute("data-id")
-    //  let dataId2=second.getAttribute("data-id")
-    //  let dataId3=third.getAttribute("data-id")
-    // let progresvalue1=0
-    // let progresvalue2=0
-    // let progresvalue3=0
-    // let progresvaluend1= parseInt(dataId1)
-    // let progresvaluend2= parseInt(dataId2)
-    // let progresvaluend3= parseInt(dataId3)
-    
-    // let progres=setInterval(() => {
-    //     progresvalue1++
-    //     first.textContent= `${progresvalue1}%`
-    //     if(progresvalue1==progresvaluend1 ){
-    //         clearInterval(progres)
-    //     }
-    // },20);
-    
-    // let progress=setInterval(() => {
-    //     progresvalue2++
-    //     second.textContent= `${progresvalue2}%`
-    //     if(progresvalue2==progresvaluend3 ){
-    //         clearInterval(progress)
-    //     }
-    // },20);
 
-    // let progresss=setInterval(() => {
-    //     progresvalue3++
-    //     third.textContent= `${progresvalue3}%`
-    //     if(progresvalue3==progresvaluend3 ){
-    //         clearInterval(progresss)
-    //     }
-    // },20);
 
   

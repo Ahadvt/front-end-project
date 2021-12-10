@@ -1374,6 +1374,7 @@ main {
 
         #tab-top {
             margin-top: 6rem;
+            margin-bottom: 2rem;
             overflow: hidden;
             padding: 0px;
 
@@ -1381,6 +1382,9 @@ main {
                 .butns {
                     margin: 0px;
                     display: block;
+                    margin-bottom: 1rem;
+                    margin-top: 1rem;
+                    
 
 
                     .butn {
@@ -1416,6 +1420,7 @@ main {
             .butns-cards {
                 .butns {
                     width: 100% !important;
+                    margin-bottom: 1rem;
 
 
                     .butn {
@@ -1471,6 +1476,7 @@ main {
                 margin-top: 12rem;
                 margin-left: -1.700rem;
                 display: block;
+                margin-bottom: -2rem;
 
                 .butn {
                     width: auto;
@@ -2321,6 +2327,9 @@ main {
                     font-weight: 500;
                     letter-spacing: 0.1em;
                     cursor: pointer;
+                    @media screen and(max-width:400px) {
+                        border-bottom: none;
+                    }
                 }
             }
         }
@@ -2730,6 +2739,12 @@ main {
                     @media screen and (max-width:500px) {
                        width: 1rem;
                     }
+                    @media screen and (max-width:400px) {
+                        width: 1rem;
+                        top: 40%;
+                        left: 45%;
+                      
+                     }
 
                     .name {
                         h3 {
@@ -2822,6 +2837,9 @@ main {
         }
 
         .info {
+            @media screen and(max-width:400px) {
+                margin-left: 2.9rem;
+            }
             text-align: center;
             display: flex;
             margin-top: 1rem;
@@ -2877,6 +2895,10 @@ main {
 
                 .text {
                     text-align: center;
+                    @media screen and(max-width:400px) {
+                        font-size: 13px;
+                        margin-right: 1rem;
+                    }
 
                     .price {
                         color: #757575;
@@ -3051,7 +3073,7 @@ main {
 
 footer {
     background-color: #FEFAF3;
-    overflow: hidden;
+    // overflow: hidden;
 
     .topFooter {
         padding: 2rem 1rem;
